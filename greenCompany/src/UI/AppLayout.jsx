@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import styled from "styled-components";
+import NavBar from "./NavBar";
 
 const StyledAppLayout = styled.div``;
 
@@ -8,7 +9,7 @@ const Main = styled.main``;
 const AppLayout = () => {
   return (
     <StyledAppLayout>
-      <header>dsadsadasdsa</header>
+      <NavBar />
       <Main>
         <Outlet />
       </Main>
