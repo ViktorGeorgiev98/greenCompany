@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import myImage from "../public/images/logo.png";
+import myImage from "../public/images/logo_transparent.png";
 const StyledLogo = styled.div`
   text-align: center;
+  display: block;
 `;
 
 const Img = styled.img`
-  height: 9.8rem;
+  height: 12rem;
   width: auto;
 `;
 

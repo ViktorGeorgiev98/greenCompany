@@ -5,6 +5,10 @@ const GlobalStyles = createGlobalStyle`
 :root {
   /* Indigo */
   --color-font-main: #ccc;
+  --color-main-dark: #018749;
+  --color-main-light: #D0F0C0;
+  --color-font-static: #FFFFFF;
+  --color-font-hover: #CFB53B;
 }
 
 *,

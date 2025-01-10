@@ -2,12 +2,24 @@ import styled from "styled-components";
 import { useLanguageContext } from "../Context/LanguageContext";
 import Logo from "./Logo";
 import { NavLink } from "react-router";
+import { bg, english } from "../Utils/constants";
+import bgFlag from "../public/images/Flag_of_Bulgaria.svg.png";
+import englishFlag from "../public/images/englishFlag.png";
 
 const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 4rem;
+  padding: 1.5rem 3rem;
+  /* position: absolute;
+  top: 0; */
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    var(--color-main-light),
+    var(--color-main-dark)
+  );
+  background-size: cover;
 `;
 
 const StyledNav = styled.nav`
@@ -22,24 +34,59 @@ const StyledUl = styled.ul`
 
 const StyledLi = styled.li``;
 
-const StyledLink = styled.a``;
+const StyledLink = styled(NavLink)`
+  color: var(--color-font-static);
+  text-decoration: none;
+  transition: 0.5s all;
+  font-weight: 600;
+  padding-bottom: 0.4rem;
+  font-size: 2rem;
+  &:hover {
+    color: var(--color-font-hover);
+    border-bottom: 1px solid var(--color-font-hover);
+  }
+`;
+
+const StyledI = styled.i`
+  display: inline-block;
+  width: ${(props) => props.size || "24px"};
+  height: ${(props) => props.size || "24px"};
+  background-image: url(${(props) => props.src});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+`;
 
 function NavBar() {
   const { language, setLanguage } = useLanguageContext();
-
   return (
     <StyledHeader>
       <Logo />
       <StyledNav>
         <StyledUl>
           <StyledLi>
-            <NavLink>nestho</NavLink>
+            <StyledLink to="home">
+              {language === "English"
+                ? english.headerHomeTab
+                : bg.headerHomeTab}
+            </StyledLink>
           </StyledLi>
           <StyledLi>
-            <NavLink>nestho</NavLink>
+            <StyledLink to="about">
+              {language === "English"
+                ? english.headerAboutTab
+                : bg.headerAboutTab}
+            </StyledLink>
           </StyledLi>
           <StyledLi>
-            <NavLink>nestho</NavLink>
+            <StyledI
+              src={language === "English" ? bgFlag : englishFlag}
+              size="3rem"
+              onClick={() =>
+                setLanguage(language === "English" ? "Bulgarian" : "English")
+              }
+            />
           </StyledLi>
         </StyledUl>
       </StyledNav>
