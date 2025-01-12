@@ -3,7 +3,6 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
 
 :root {
-  /* Indigo */
   --color-font-main: #ccc;
   --color-main-dark: #018749;
   --color-main-light: #D0F0C0;
@@ -25,7 +24,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: var(--color-font-main);
+  color: var(--color-font-static);
 
   transition: color 0.3s, background-color 0.3s;
   min-height: 100vh;

@@ -32,7 +32,12 @@ const StyledUl = styled.ul`
   align-items: center;
 `;
 
-const StyledLi = styled.li``;
+const StyledLi = styled.li`
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 const StyledLink = styled(NavLink)`
   color: var(--color-font-static);
@@ -41,9 +46,26 @@ const StyledLink = styled(NavLink)`
   font-weight: 600;
   padding-bottom: 0.4rem;
   font-size: 2rem;
+  position: relative;
+
   &:hover {
     color: var(--color-font-hover);
-    border-bottom: 1px solid var(--color-font-hover);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: var(--color-font-hover);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
   }
 `;
 
