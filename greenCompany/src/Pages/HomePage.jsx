@@ -19,15 +19,23 @@ const StyledHomePage = styled.section`
   padding: 8rem;
 `;
 
-const StyledHomePageLeftSide = styled.div``;
+const StyledHomePageLeftSide = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+`;
 const StyledHomePageRightSide = styled.div``;
 
 function HomePage() {
   return (
     <StyledHomePage>
       <StyledHomePageLeftSide>
-        <Header type="main">Green Company</Header>
-        <Header type="secondary">
+        <Header animation="leftToRight" type="main">
+          Green Company
+        </Header>
+        <Header animation="leftToRightSecondary" type="secondary">
           Your dream green space is only a phone call away
         </Header>
         <ButtonsGroup>

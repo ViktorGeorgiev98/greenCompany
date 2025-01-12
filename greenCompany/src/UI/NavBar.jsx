@@ -40,7 +40,7 @@ const StyledLi = styled.li`
 `;
 
 const StyledLink = styled(NavLink)`
-  color: var(--color-font-static);
+  color: var(#ffffff);
   text-decoration: none;
   transition: 0.5s all;
   font-weight: 600;
