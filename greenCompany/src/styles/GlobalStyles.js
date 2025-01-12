@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, keyframes } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
@@ -8,6 +8,7 @@ const GlobalStyles = createGlobalStyle`
   --color-main-light: #D0F0C0;
   --color-font-static: #FFFFFF;
   --color-font-hover: #CFB53B;
+  --color-grey: #36454F;
 }
 
 *,
@@ -75,6 +76,21 @@ h6 {
 
 img {
   max-width: 100%;
+}
+
+
+
+// ANIMATIONS
+@keyframes constantPopUp {
+  0% {
+   transform: scale(1)
+  }
+  50% {
+    transform: scale(1.1)
+  }
+  100% {
+    transform: scale(1)
+  }
 }
 `;
 

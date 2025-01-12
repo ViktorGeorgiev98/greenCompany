@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Header from "../UI/Header";
+import ButtonsGroup from "../UI/ButtonsGroup";
+import Button from "../UI/Button";
 
 const StyledHomePage = styled.section`
   width: 100%;
@@ -28,6 +30,14 @@ function HomePage() {
         <Header type="secondary">
           Your dream green space is only a phone call away
         </Header>
+        <ButtonsGroup>
+          <Button type="primary" animation="primary">
+            Contact us
+          </Button>
+          <Button type="secondary" animation="secondary">
+            Learn more
+          </Button>
+        </ButtonsGroup>
       </StyledHomePageLeftSide>
       <StyledHomePageRightSide>TEST</StyledHomePageRightSide>
     </StyledHomePage>
