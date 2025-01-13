@@ -21,6 +21,13 @@ const StyledH1 = styled.h1`
   animation-delay: ${(props) => props.delay || "0s"};
 `;
 
+const StyledH2 = styled.h2`
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color-main-dark);
+  letter-spacing: 1rem;
+`;
+
 // const StyledHeaderTertiary = styled.h3`
 //   font-size: 2.2rem;
 //   font-weight: 600;
@@ -49,6 +56,13 @@ function Header({ type, animation, delay, children }) {
     );
   }
   if (type === "secondary") {
+    return (
+      <StyledH2 animation={animation} delay={delay}>
+        {children}
+      </StyledH2>
+    );
+  }
+  if (type === "tertiary") {
     return (
       <StyledHeaderTertiary animation={animation} delay={delay}>
         {children}

@@ -4,7 +4,7 @@ const GlobalStyles = createGlobalStyle`
 
 :root {
   --color-font-main: #ccc;
-  --color-main-dark: #00674b;
+  --color-main-dark: #1CAC78;
   --color-main-light: #D0F0C0;
   --color-font-static: #FFFFFF;
   --color-font-hover: #CFB53B;

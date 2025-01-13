@@ -50,7 +50,7 @@ function HeroSection() {
         <Header animation="leftToRight" type="main">
           Green Company
         </Header>
-        <Header animation="leftToRightSecondary" type="secondary" delay="1s">
+        <Header animation="leftToRightSecondary" type="tertiary" delay="1s">
           {language === "English"
             ? english.heroSectionSecondaryHeader
             : bg.heroSectionSecondaryHeader}
