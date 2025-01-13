@@ -5,7 +5,7 @@ import Button from "../UI/Button";
 
 const StyledHomePage = styled.section`
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   background: linear-gradient(
     to right,
     var(--color-main-light),
@@ -16,7 +16,7 @@ const StyledHomePage = styled.section`
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5rem;
-  padding: 8rem;
+  padding: 9rem;
 `;
 
 const StyledHomePageLeftSide = styled.div`
@@ -35,7 +35,7 @@ function HomePage() {
         <Header animation="leftToRight" type="main">
           Green Company
         </Header>
-        <Header animation="leftToRightSecondary" type="secondary">
+        <Header animation="leftToRightSecondary" type="secondary" delay="1s">
           Your dream green space is only a phone call away
         </Header>
         <ButtonsGroup>

@@ -5,7 +5,7 @@ const animation = {
     animation: leftToRight 1.5s ease-in-out forwards;
   `,
   leftToRightSecondary: css`
-    animation: leftToRight 1.5s ease-in-out 0.5s forwards;
+    animation: leftToRight 1.5s ease-out forwards;
   `,
 };
 
@@ -18,25 +18,39 @@ const StyledH1 = styled.h1`
   opacity: 0;
   transform: translateX(-100%);
   ${(props) => animation[props.animation] || ""};
+  animation-delay: ${(props) => props.delay || "0s"};
 `;
 
+// const StyledHeaderTertiary = styled.h3`
+//   font-size: 2.2rem;
+//   font-weight: 600;
+//   color: var(--color-font-static);
+//   opacity: 0;
+//   transform: translateX(-100%);
+// `;
 const StyledHeaderTertiary = styled.h3`
   font-size: 2.2rem;
   font-weight: 600;
   color: var(--color-font-static);
   opacity: 0;
   transform: translateX(-100%);
-  ${(props) => animation[props.animation] || ""};
-  /* animation-delay: 0.5s; */
+  ${(props) => css`
+    ${animation[props.animation] || ""}
+    animation-delay: ${props.delay || "0s"};
+  `}
 `;
 
-function Header({ type, animation, children }) {
+function Header({ type, animation, delay, children }) {
   if (type === "main") {
-    return <StyledH1 animation={animation}>{children}</StyledH1>;
+    return (
+      <StyledH1 animation={animation} delay={delay}>
+        {children}
+      </StyledH1>
+    );
   }
   if (type === "secondary") {
     return (
-      <StyledHeaderTertiary animation={animation}>
+      <StyledHeaderTertiary animation={animation} delay={delay}>
         {children}
       </StyledHeaderTertiary>
     );
