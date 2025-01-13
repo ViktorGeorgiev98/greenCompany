@@ -2,10 +2,12 @@ import styled from "styled-components";
 import Header from "../UI/Header";
 import ButtonsGroup from "../UI/ButtonsGroup";
 import Button from "../UI/Button";
+import heroSectionBackyard from "../public/images/hero-section-backyard.jpg";
+import { useLanguageContext } from "../Context/LanguageContext";
+import { bg, english } from "../Utils/constants";
 
 const StyledHomePage = styled.section`
   width: 100%;
-  /* height: 100vh; */
   background: linear-gradient(
     to right,
     var(--color-main-light),
@@ -15,8 +17,8 @@ const StyledHomePage = styled.section`
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5rem;
-  padding: 9rem;
+  grid-gap: 6rem;
+  padding: 8rem;
 `;
 
 const StyledHomePageLeftSide = styled.div`
@@ -24,11 +26,21 @@ const StyledHomePageLeftSide = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 5rem;
 `;
-const StyledHomePageRightSide = styled.div``;
+const StyledHomePageRightSide = styled.div`
+  animation: RightToLeft 1.5s ease-in-out forwards;
+`;
+
+const StyledHeroI = styled.img`
+  width: 65%;
+  height: 60rem;
+  display: block;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+`;
 
 function HomePage() {
+  const { language } = useLanguageContext();
   return (
     <StyledHomePage>
       <StyledHomePageLeftSide>
@@ -36,18 +48,29 @@ function HomePage() {
           Green Company
         </Header>
         <Header animation="leftToRightSecondary" type="secondary" delay="1s">
-          Your dream green space is only a phone call away
+          {language === "English"
+            ? english.heroSectionSecondaryHeader
+            : bg.heroSectionSecondaryHeader}
         </Header>
-        <ButtonsGroup>
+        <ButtonsGroup animation="bottomUpwards" delay="1.75s">
           <Button type="primary" animation="primary">
-            Contact us
+            {language === "English"
+              ? english.heroSectionButtonMain
+              : bg.heroSectionButtonMain}
           </Button>
           <Button type="secondary" animation="secondary">
-            Learn more
+            {language === "English"
+              ? english.heroSectionButtonSecondary
+              : bg.heroSectionButtonSecondary}
           </Button>
         </ButtonsGroup>
       </StyledHomePageLeftSide>
-      <StyledHomePageRightSide>TEST</StyledHomePageRightSide>
+      <StyledHomePageRightSide>
+        <StyledHeroI
+          src={heroSectionBackyard}
+          alt="Beautiful image of a backyard"
+        ></StyledHeroI>
+      </StyledHomePageRightSide>
     </StyledHomePage>
   );
 }

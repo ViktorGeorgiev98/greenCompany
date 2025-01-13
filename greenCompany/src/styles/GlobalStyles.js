@@ -4,7 +4,7 @@ const GlobalStyles = createGlobalStyle`
 
 :root {
   --color-font-main: #ccc;
-  --color-main-dark: #018749;
+  --color-main-dark: #00674b;
   --color-main-light: #D0F0C0;
   --color-font-static: #FFFFFF;
   --color-font-hover: #CFB53B;
@@ -101,6 +101,28 @@ img {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+};
+
+@keyframes RightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+};
+
+@keyframes bottomUpwards {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 `;
