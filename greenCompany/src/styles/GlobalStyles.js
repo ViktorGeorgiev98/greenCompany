@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
   --color-font-static: #FFFFFF;
   --color-font-hover: #CFB53B;
   --color-grey: #36454F;
+  --color-white: #FFFFFF;
 }
 
 *,
