@@ -10,7 +10,7 @@ const animation = {
 };
 
 const StyledH1 = styled.h1`
-  font-size: 6rem;
+  font-size: 7rem;
   font-weight: 600;
   color: var(#ffffff);
   letter-spacing: 1rem;
@@ -24,8 +24,15 @@ const StyledH1 = styled.h1`
 const StyledH2 = styled.h2`
   font-size: 3rem;
   font-weight: 600;
-  color: var(--color-main-dark);
+  color: ${(props) =>
+    css`
+      ${props.textColor || "#1CAC78"}
+    `};
   letter-spacing: 1rem;
+  transition: all 0.5s ease-out;
+  &:hover {
+    color: var(--color-font-hover);
+  }
 `;
 
 // const StyledHeaderTertiary = styled.h3`
@@ -47,7 +54,7 @@ const StyledHeaderTertiary = styled.h3`
   `}
 `;
 
-function Header({ type, animation, delay, children }) {
+function Header({ type, animation, delay, textColor, children }) {
   if (type === "main") {
     return (
       <StyledH1 animation={animation} delay={delay}>
@@ -57,7 +64,7 @@ function Header({ type, animation, delay, children }) {
   }
   if (type === "secondary") {
     return (
-      <StyledH2 animation={animation} delay={delay}>
+      <StyledH2 animation={animation} delay={delay} textColor={textColor}>
         {children}
       </StyledH2>
     );
