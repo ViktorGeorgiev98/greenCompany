@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Header from "./Header";
+import { useLanguageContext } from "../Context/LanguageContext";
+import { bg, english } from "../Utils/constants";
 
 const StyledGallerySection = styled.section`
   width: 100%;
@@ -12,10 +14,11 @@ const StyledGallerySection = styled.section`
 `;
 
 function Gallery() {
+  const { language } = useLanguageContext();
   return (
     <StyledGallerySection>
       <Header type="secondary" textColor="#1CAC78">
-        Our Projects
+        {language === "English" ? english.galleryHeader : bg.galleryHeader}
       </Header>
     </StyledGallerySection>
   );

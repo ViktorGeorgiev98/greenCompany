@@ -32,16 +32,10 @@ const StyledH2 = styled.h2`
   transition: all 0.5s ease-out;
   &:hover {
     color: var(--color-font-hover);
+    transform: scale(1.05) rotate(5deg);
   }
 `;
 
-// const StyledHeaderTertiary = styled.h3`
-//   font-size: 2.2rem;
-//   font-weight: 600;
-//   color: var(--color-font-static);
-//   opacity: 0;
-//   transform: translateX(-100%);
-// `;
 const StyledHeaderTertiary = styled.h3`
   font-size: 2.2rem;
   font-weight: 600;

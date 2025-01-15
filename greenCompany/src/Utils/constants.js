@@ -34,6 +34,7 @@ export const bg = {
     "Създаваме персонализирани покривни градини според вашите изисквания",
   ourServiceHeaderCard6Text:
     "Изграждаме персонализирани автоматизирани поливни системи за всеки проект",
+  galleryHeader: "Нашите проекти",
 };
 
 export const english = {
@@ -72,4 +73,5 @@ export const english = {
     "We make custom roof gardens as per your requirements",
   ourServiceHeaderCard6Text:
     "We make custom automated watering systems for any project",
+  galleryHeader: "Our Projects",
 };
