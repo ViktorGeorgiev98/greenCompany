@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Header from "./Header";
-import phoneCallImage from "../public/images/phoneCall.png";
+import phoneCallImage from "../public/images/phoneCall.jpg";
 import personWorking from "../public/images/personWorking.jpg";
 import projectDone from "../public/images/projectDone.jpg";
 import { useLanguageContext } from "../Context/LanguageContext";

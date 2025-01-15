@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import projectPaper from "../public/images/projectPaper.jpg";
+import fullRealization from "../public/images/fullRealization.jpg";
+import gardenMaintenance from "../public/images/gardenMaintenance.jpg";
+import landscaping from "../public/images/landscaping.jpg";
+import rooftopGarden from "../public/images/roofTopGarden.jpg";
+import wateringSystem from "../public/images/wateringSystem.jpg";
 import Header from "./Header";
+import { useLanguageContext } from "../Context/LanguageContext";
+import { bg, english } from "../Utils/constants";
 const StyledOurService = styled.section`
   padding: 10rem 15rem;
   background: linear-gradient(
@@ -56,7 +63,7 @@ const OurServiceCardImg = styled.img`
 const OurServiceCardTitle = styled.h3`
   font-size: 2.5rem;
   font-weight: 600;
-  color: var(--color-grey);
+  color: var(--color-font-hover);
   padding: 2rem;
 `;
 
@@ -69,10 +76,13 @@ const OurServiceCardText = styled.p`
 `;
 
 function OurService() {
+  const { language } = useLanguageContext();
   return (
     <StyledOurService>
-      <Header type="secondary" textColor="#36454F">
-        Our Service
+      <Header type="secondary" textColor="#fff">
+        {language === "English"
+          ? english.ourServiceHeader
+          : bg.ourServiceHeader}
       </Header>
       <StyledOutOfServiceGridRow>
         <OurServiceCardItem>
@@ -80,59 +90,95 @@ function OurService() {
             src={projectPaper}
             alt="Project"
           ></OurServiceCardImg>
-          <OurServiceCardTitle>Design & Project</OurServiceCardTitle>
+          <OurServiceCardTitle>
+            {language === "English"
+              ? english.ourServiceHeaderCard1Header
+              : bg.ourServiceHeaderCard1Header}
+          </OurServiceCardTitle>
           <OurServiceCardText>
-            We are making the design and project based on your vision
+            {language === "English"
+              ? english.ourServiceHeaderCard1Text
+              : bg.ourServiceHeaderCard1Text}
           </OurServiceCardText>
         </OurServiceCardItem>
         <OurServiceCardItem>
           <OurServiceCardImg
-            src={projectPaper}
+            src={fullRealization}
             alt="Project"
           ></OurServiceCardImg>
-          <OurServiceCardTitle>Design & Project</OurServiceCardTitle>
+          <OurServiceCardTitle>
+            {language === "English"
+              ? english.ourServiceHeaderCard2Header
+              : bg.ourServiceHeaderCard2Header}
+          </OurServiceCardTitle>
           <OurServiceCardText>
-            We are making the design and project based on your vision
+            {language === "English"
+              ? english.ourServiceHeaderCard2Text
+              : bg.ourServiceHeaderCard2Text}
           </OurServiceCardText>
         </OurServiceCardItem>
         <OurServiceCardItem>
           <OurServiceCardImg
-            src={projectPaper}
+            src={gardenMaintenance}
             alt="Project"
           ></OurServiceCardImg>
-          <OurServiceCardTitle>Design & Project</OurServiceCardTitle>
+          <OurServiceCardTitle>
+            {language === "English"
+              ? english.ourServiceHeaderCard3Header
+              : bg.ourServiceHeaderCard3Header}
+          </OurServiceCardTitle>
           <OurServiceCardText>
-            We are making the design and project based on your vision
+            {language === "English"
+              ? english.ourServiceHeaderCard3Text
+              : bg.ourServiceHeaderCard3Text}
           </OurServiceCardText>
         </OurServiceCardItem>
         <OurServiceCardItem>
           <OurServiceCardImg
-            src={projectPaper}
+            src={landscaping}
             alt="Project"
           ></OurServiceCardImg>
-          <OurServiceCardTitle>Design & Project</OurServiceCardTitle>
+          <OurServiceCardTitle>
+            {language === "English"
+              ? english.ourServiceHeaderCard4Header
+              : bg.ourServiceHeaderCard4Header}
+          </OurServiceCardTitle>
           <OurServiceCardText>
-            We are making the design and project based on your vision
+            {language === "English"
+              ? english.ourServiceHeaderCard4Text
+              : bg.ourServiceHeaderCard4Text}
           </OurServiceCardText>
         </OurServiceCardItem>
         <OurServiceCardItem>
           <OurServiceCardImg
-            src={projectPaper}
+            src={rooftopGarden}
             alt="Project"
           ></OurServiceCardImg>
-          <OurServiceCardTitle>Design & Project</OurServiceCardTitle>
+          <OurServiceCardTitle>
+            {language === "English"
+              ? english.ourServiceHeaderCard5Header
+              : bg.ourServiceHeaderCard5Header}
+          </OurServiceCardTitle>
           <OurServiceCardText>
-            We are making the design and project based on your vision
+            {language === "English"
+              ? english.ourServiceHeaderCard5Text
+              : bg.ourServiceHeaderCard5Text}
           </OurServiceCardText>
         </OurServiceCardItem>
         <OurServiceCardItem>
           <OurServiceCardImg
-            src={projectPaper}
+            src={wateringSystem}
             alt="Project"
           ></OurServiceCardImg>
-          <OurServiceCardTitle>Design & Project</OurServiceCardTitle>
+          <OurServiceCardTitle>
+            {language === "English"
+              ? english.ourServiceHeaderCard6Header
+              : bg.ourServiceHeaderCard6Header}
+          </OurServiceCardTitle>
           <OurServiceCardText>
-            We are making the design and project based on your vision
+            {language === "English"
+              ? english.ourServiceHeaderCard6Text
+              : bg.ourServiceHeaderCard6Text}
           </OurServiceCardText>
         </OurServiceCardItem>
       </StyledOutOfServiceGridRow>

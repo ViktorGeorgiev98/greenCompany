@@ -46,7 +46,7 @@ const StyledLink = styled(NavLink)`
   font-weight: 600;
   padding-bottom: 0.4rem;
   font-size: 2rem;
-  /* position: relative; */
+  position: relative;
 
   &:hover {
     color: var(--color-font-hover);
