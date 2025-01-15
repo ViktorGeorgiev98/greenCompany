@@ -5,6 +5,7 @@ import ButtonsGroup from "./ButtonsGroup";
 import Button from "./Button";
 import heroSectionBackyard from "../public/images/hero-section-backyard.jpg";
 import { bg, english } from "../Utils/constants";
+import { useNavigate } from "react-router";
 
 const StyledHeroSection = styled.section`
   width: 100%;
@@ -44,6 +45,7 @@ const StyledHeroI = styled.img`
 
 function HeroSection() {
   const { language } = useLanguageContext();
+  const navigate = useNavigate();
   return (
     <StyledHeroSection>
       <StyledHeroSectionLeftSide>
@@ -61,7 +63,11 @@ function HeroSection() {
               ? english.heroSectionButtonMain
               : bg.heroSectionButtonMain}
           </Button>
-          <Button type="secondary" animation="secondary">
+          <Button
+            type="secondary"
+            animation="secondary"
+            onClick={() => navigate("home")}
+          >
             {language === "English"
               ? english.heroSectionButtonSecondary
               : bg.heroSectionButtonSecondary}

@@ -1,3 +1,4 @@
+import Gallery from "../UI/Gallery";
 import HeroSection from "../UI/HeroSection";
 import HowItWorks from "../UI/HowItWorks";
 import OurService from "../UI/OurService";
@@ -8,6 +9,7 @@ function HomePage() {
       <HeroSection />
       <HowItWorks />
       <OurService />
+      <Gallery />
     </>
   );
 }

@@ -48,7 +48,7 @@ const OurServiceCardItem = styled.div`
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   border-radius: 0.5rem;
   &:hover {
-    transform: translateY(-2rem);
+    transform: translateY(-2rem) scale(1.1);
   }
   overflow: hidden;
 `;
