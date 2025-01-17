@@ -1,6 +1,7 @@
 import { Outlet } from "react-router";
 import styled from "styled-components";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 const StyledAppLayout = styled.div``;
 
@@ -13,6 +14,7 @@ const AppLayout = () => {
       <Main>
         <Outlet />
       </Main>
+      <Footer />
     </StyledAppLayout>
   );
 };

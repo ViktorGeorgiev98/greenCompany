@@ -89,6 +89,7 @@ function OurService() {
           <OurServiceCardImg
             src={projectPaper}
             alt="Project"
+            loading="lazy"
           ></OurServiceCardImg>
           <OurServiceCardTitle>
             {language === "English"
@@ -105,6 +106,7 @@ function OurService() {
           <OurServiceCardImg
             src={fullRealization}
             alt="Project"
+            loading="lazy"
           ></OurServiceCardImg>
           <OurServiceCardTitle>
             {language === "English"
@@ -121,6 +123,7 @@ function OurService() {
           <OurServiceCardImg
             src={gardenMaintenance}
             alt="Project"
+            loading="lazy"
           ></OurServiceCardImg>
           <OurServiceCardTitle>
             {language === "English"
@@ -137,6 +140,7 @@ function OurService() {
           <OurServiceCardImg
             src={landscaping}
             alt="Project"
+            loading="lazy"
           ></OurServiceCardImg>
           <OurServiceCardTitle>
             {language === "English"
@@ -153,6 +157,7 @@ function OurService() {
           <OurServiceCardImg
             src={rooftopGarden}
             alt="Project"
+            loading="lazy"
           ></OurServiceCardImg>
           <OurServiceCardTitle>
             {language === "English"
@@ -169,6 +174,7 @@ function OurService() {
           <OurServiceCardImg
             src={wateringSystem}
             alt="Project"
+            loading="lazy"
           ></OurServiceCardImg>
           <OurServiceCardTitle>
             {language === "English"
