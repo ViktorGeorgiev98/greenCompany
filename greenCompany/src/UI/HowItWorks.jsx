@@ -5,6 +5,7 @@ import personWorking from "../public/images/personWorking.jpg";
 import projectDone from "../public/images/projectDone.jpg";
 import { useLanguageContext } from "../Context/LanguageContext";
 import { bg, english } from "../Utils/constants";
+import { AiFillPhone } from "react-icons/ai";
 
 const StyledHowItWorks = styled.section`
   /* height: 100vh; */
@@ -87,7 +88,10 @@ function HowItWorks() {
               : bg.howItWorksContainerText}
           </StyledHowItWorksText>
         </StyledHowItWorksTextContainer>
-        <StyledHowItWorksImg src={phoneCallImage} alt="Phone call image" />
+        <StyledHowItWorksImg
+          src={phoneCallImage}
+          alt="Phone call image"
+        ></StyledHowItWorksImg>
         <StyledHowItWorksImg src={personWorking} alt="Person working" />
         <StyledHowItWorksTextContainer>
           <StyledHowItWorksTitle>02</StyledHowItWorksTitle>

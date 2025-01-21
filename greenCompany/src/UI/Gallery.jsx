@@ -42,9 +42,9 @@ const GalleryImg = styled.img`
   object-fit: cover;
   display: block;
   transition: all 0.3s;
-  &:hover {
+  /* &:hover {
     transform: scale(1.1);
-  }
+  } */
 `;
 
 const GalleryItem = styled.div`
