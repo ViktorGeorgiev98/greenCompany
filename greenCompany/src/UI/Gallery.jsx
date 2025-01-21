@@ -42,9 +42,9 @@ const GalleryImg = styled.img`
   object-fit: cover;
   display: block;
   transition: all 0.3s;
-  /* &:hover {
+  &:hover {
     transform: scale(1.1);
-  } */
+  }
 `;
 
 const GalleryItem = styled.div`
@@ -62,46 +62,46 @@ function Gallery() {
       </Header>
       <StyledGallery>
         <GalleryItem gridRow="1 / span 2" gridColumn="1 / span 2">
-          <GalleryImg loading="lazy" src={gallery1} alt="Gallery image 1" />
+          <GalleryImg src={gallery1} alt="Gallery image 1" />
         </GalleryItem>
         <GalleryItem gridRow="1 / span 3" gridColumn="3 / span 3">
-          <GalleryImg loading="lazy" src={gallery2} alt="Gallery image 1" />
+          <GalleryImg src={gallery2} alt="Gallery image 1" />
         </GalleryItem>
         <GalleryItem gridRow="1 / span 2" gridColumn="6 / 7">
-          <GalleryImg loading="lazy" src={gallery3} alt="Gallery image 1" />
+          <GalleryImg src={gallery3} alt="Gallery image 1" />
         </GalleryItem>
         <GalleryItem gridRow="1 / span 2" gridColumn="7 / -1">
-          <GalleryImg loading="lazy" src={gallery4} alt="Gallery image 1" />
+          <GalleryImg src={gallery4} alt="Gallery image 1" />
         </GalleryItem>
         <GalleryItem gridRow="3 / span 3" gridColumn="1 / span 2">
-          <GalleryImg loading="lazy" src={gallery5} alt="Gallery image 1" />
+          <GalleryImg src={gallery5} alt="Gallery image 1" />
         </GalleryItem>
         <GalleryItem gridRow="4 / span 2" gridColumn="3 / span 2">
-          <GalleryImg loading="lazy" src={gallery6} alt="Gallery image 1" />
+          <GalleryImg src={gallery6} alt="Gallery image 1" />
         </GalleryItem>
         <GalleryItem gridRow="4 / 5" gridColumn="5 / 6">
-          <GalleryImg loading="lazy" src={gallery7} alt="Gallery image 1" />
+          <GalleryImg src={gallery7} alt="Gallery image 1" />
         </GalleryItem>
         <GalleryItem gridRow="3 / span 2" gridColumn="6 / span 2">
-          <GalleryImg loading="lazy" src={gallery8} alt="Gallery image 1" />
+          <GalleryImg src={gallery8} alt="Gallery image 1" />
         </GalleryItem>
         <GalleryItem gridRow="3 / span 3" gridColumn="8 / -1">
-          <GalleryImg loading="lazy" src={gallery9} alt="Gallery image 1" />
+          <GalleryImg src={gallery9} alt="Gallery image 1" />
         </GalleryItem>
         <GalleryItem gridRow="6 / span 2" gridColumn="1 / 2">
-          <GalleryImg loading="lazy" src={gallery10} alt="Gallery image 1" />
+          <GalleryImg src={gallery10} alt="Gallery image 1" />
         </GalleryItem>
         <GalleryItem gridRow="6 / span 2" gridColumn="2 / span 2">
-          <GalleryImg loading="lazy" src={gallery11} alt="Gallery image 1" />
+          <GalleryImg src={gallery11} alt="Gallery image 1" />
         </GalleryItem>
         <GalleryItem gridRow=" 6 / span 2" gridColumn="4 / 5">
-          <GalleryImg loading="lazy" src={gallery12} alt="Gallery image 1" />
+          <GalleryImg src={gallery12} alt="Gallery image 1" />
         </GalleryItem>
         <GalleryItem gridRow="5 / span 3" gridColumn="5 / span 3">
-          <GalleryImg loading="lazy" src={gallery13} alt="Gallery image 1" />
+          <GalleryImg src={gallery13} alt="Gallery image 1" />
         </GalleryItem>
         <GalleryItem gridRow="6 / span 2" gridColumn="8 / -1">
-          <GalleryImg loading="lazy" src={gallery14} alt="Gallery image 1" />
+          <GalleryImg src={gallery14} alt="Gallery image 1" />
         </GalleryItem>
       </StyledGallery>
     </StyledGallerySection>

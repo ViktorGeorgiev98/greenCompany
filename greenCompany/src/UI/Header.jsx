@@ -39,7 +39,7 @@ const StyledH2 = styled.h2`
 const StyledHeaderTertiary = styled.h3`
   font-size: 2.2rem;
   font-weight: 600;
-  color: var(--color-font-static);
+  color: ${(props) => props.textColor || "#FFFFFF"};
   opacity: 0;
   transform: translateX(-100%);
   ${(props) => css`
@@ -65,7 +65,11 @@ function Header({ type, animation, delay, textColor, children }) {
   }
   if (type === "tertiary") {
     return (
-      <StyledHeaderTertiary animation={animation} delay={delay}>
+      <StyledHeaderTertiary
+        animation={animation}
+        delay={delay}
+        textColor={textColor}
+      >
         {children}
       </StyledHeaderTertiary>
     );
