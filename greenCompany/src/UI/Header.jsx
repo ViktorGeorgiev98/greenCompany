@@ -10,7 +10,7 @@ const animation = {
 };
 
 const StyledH1 = styled.h1`
-  font-size: 7rem;
+  font-size: 6.5rem;
   font-weight: 600;
   color: var(#ffffff);
   letter-spacing: 1rem;

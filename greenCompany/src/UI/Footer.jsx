@@ -16,7 +16,7 @@ const StyledFooter = styled.footer`
 
 const StyledFooterColumn = styled.div``;
 function Footer() {
-  return <StyledFooter></StyledFooter>;
+  return <StyledFooter>footer</StyledFooter>;
 }
 
 export default Footer;

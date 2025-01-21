@@ -18,22 +18,25 @@ const StyledHeroSection = styled.section`
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 6rem;
-  padding: 8rem;
+  grid-column-gap: 10rem;
+  padding: 2.5rem 12rem 7.5rem 12rem;
 `;
 
 const StyledHeroSectionLeftSide = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   gap: 5rem;
+  /* width: 100%; */
 `;
-const StyledHeroSectionRightSide = styled.div``;
+const StyledHeroSectionRightSide = styled.div`
+  /* width: 100%; */
+`;
 
 const StyledHeroI = styled.img`
-  width: 65%;
-  height: 60rem;
+  width: 100%;
+  height: auto;
   display: block;
   animation: RightToLeft 1.5s ease-out forwards;
   opacity: 0;

@@ -2,7 +2,7 @@ export const bg = {
   headerHomeTab: "Начална страница",
   headerAboutTab: "За нас",
   heroSectionSecondaryHeader:
-    "Вашето мечтано зелено пространство е само на едно обаждане от вас.",
+    "Създаваме зашеметяващи пейзажи, които превръщат вашата визия в реалност. В Green Company съчетаваме иновативен дизайн и красотата на природата, за да изградим пространства, които ще обикнете.",
   heroSectionButtonMain: "Свържете се с нас",
   heroSectionButtonSecondary: "Повече за нас",
   howItWorksHeader: "Как работи",
@@ -41,7 +41,7 @@ export const english = {
   headerHomeTab: "Home Page",
   headerAboutTab: "About us",
   heroSectionSecondaryHeader:
-    "Your dream green space is only a phone call away",
+    "Creating stunning landscapes that turn your vision into reality. At Green Company, we combine innovative design and nature's beauty to craft spaces you'll love.",
   heroSectionButtonMain: "Contact us",
   heroSectionButtonSecondary: "About us",
   howItWorksHeader: "How it works",
@@ -64,7 +64,7 @@ export const english = {
   ourServiceHeaderCard1Text:
     "We are making the design and project based on your vision",
   ourServiceHeaderCard2Text:
-    "We are working on the project from start to finish as per the design",
+    "We are working on the project from start to finish.",
   ourServiceHeaderCard3Text:
     "We continue to maintain the backyard after we finish the project",
   ourServiceHeaderCard4Text:

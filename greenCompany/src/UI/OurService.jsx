@@ -25,11 +25,11 @@ const StyledOurService = styled.section`
 const StyledOutOfServiceGridRow = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 6rem;
-  grid-row-gap: 8rem;
+  grid-column-gap: 5rem;
+  grid-row-gap: 6rem;
   justify-items: center;
   align-items: center;
-  max-width: 60%;
+  max-width: 80%;
   margin-top: 6rem;
 `;
 
@@ -38,9 +38,10 @@ const OurServiceCardItem = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  gap: 3rem;
+  /* flex-wrap: wrap; */
   /* max-width: 50%; */
+  max-height: 90%;
   background-color: var(--color-white);
   transition: all 0.5s ease-out;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
@@ -64,14 +65,14 @@ const OurServiceCardTitle = styled.h3`
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--color-font-hover);
-  padding: 2rem;
+  padding: 1.5rem;
 `;
 
 const OurServiceCardText = styled.p`
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: var(--color-grey);
-  padding: 2rem;
+  padding: 2.5rem;
   padding-top: 0;
 `;
 
