@@ -16,6 +16,7 @@ import gallery11 from "../public/images/gallerySection/gallery11-min.jpg";
 import gallery12 from "../public/images/gallerySection/gallery12-min.jpg";
 import gallery13 from "../public/images/gallerySection/gallery13-min.jpg";
 import gallery14 from "../public/images/gallerySection/gallery14-min.jpg";
+import Button from "./Button";
 
 const StyledGallerySection = styled.section`
   width: 100%;
@@ -104,6 +105,11 @@ function Gallery() {
           <GalleryImg src={gallery14} alt="Gallery image 1" />
         </GalleryItem>
       </StyledGallery>
+      <Button type="primary" animation="primary">
+        {language === "English"
+          ? english.heroSectionButtonMain
+          : bg.heroSectionButtonMain}
+      </Button>
     </StyledGallerySection>
   );
 }

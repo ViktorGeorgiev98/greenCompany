@@ -12,7 +12,7 @@ const StyledHowItWorks = styled.section`
   width: 100%;
   height: auto;
   background: var(--color-white);
-  padding: 10rem 25rem 10rem 25rem;
+  padding: 10rem 20rem 10rem 20rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,7 @@ const StyledHowItWorksContainer = styled.div`
   margin-top: 7rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10rem;
+  grid-gap: 12rem;
   justify-items: center;
   align-items: center;
   /* width: 100%;
@@ -32,8 +32,8 @@ const StyledHowItWorksContainer = styled.div`
 
 const StyledHowItWorksImg = styled.img`
   display: block;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 `;
@@ -88,10 +88,11 @@ function HowItWorks() {
               : bg.howItWorksContainerText}
           </StyledHowItWorksText>
         </StyledHowItWorksTextContainer>
-        <StyledHowItWorksImg
+        <AiFillPhone fill="#1CAC78" size="35rem" />
+        {/* <StyledHowItWorksImg
           src={phoneCallImage}
           alt="Phone call image"
-        ></StyledHowItWorksImg>
+        ></StyledHowItWorksImg> */}
         <StyledHowItWorksImg src={personWorking} alt="Person working" />
         <StyledHowItWorksTextContainer>
           <StyledHowItWorksTitle>02</StyledHowItWorksTitle>

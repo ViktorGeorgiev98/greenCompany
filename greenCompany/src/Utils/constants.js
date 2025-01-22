@@ -10,11 +10,11 @@ export const bg = {
   howItWorksContainerHeader2: "Ние ще свършим работата",
   howItWorksContainerHeader3: "Насладете се на вашият красив нов двор",
   howItWorksContainerText:
-    "Обадете ни се да обсъдим дизайна и да създадем вашият проект.",
+    "Свържете се с нас днес, за да споделите своята визия за мечтаното ви пространство. Нека обсъдим вашите идеи в детайли, разберем вашите предпочитания и превърнем въображението ви в добре изработен дизайн и проектен план. Заедно ще създадем персонализиран и зашеметяващ пейзаж, който да оживи вашата визия, като се погрижим всеки детайл да бъде съобразен с вашите нужди и очаквания.",
   howItWorksContainerText2:
-    "Ще работим усърдно и със любов да реализираме мечтаното ви зелено пространство",
+    "Ние сме ангажирани да превърнем вашата визия за перфектното зелено пространство в реалност, съчетавайки креативност и прецизност, за да създадем свежа и хармонична среда, която отразява вашия уникален стил, отговаря на вашите нужди и обогатява вашето обкръжение.",
   howItWorksContainerText3:
-    "Насладете се на вашето ново любимо място където да прекарвате времето си.",
+    "Потопете се в удоволствието от вашето ново любимо място – красиво проектирано пространство, където можете да се отпуснете, да се свържете с близките си и да създадете незабравими спомени за години напред.",
   ourServiceHeader: "Нашата услуга",
   ourServiceHeaderCard1Header: "Дизайн и проект",
   ourServiceHeaderCard2Header: "Пълна реализация",
@@ -23,17 +23,16 @@ export const bg = {
   ourServiceHeaderCard5Header: "Покривни градини",
   ourServiceHeaderCard6Header: "Поливни системи",
   ourServiceHeaderCard1Text:
-    "Създаваме дизайн и проект, базирани на вашата визия",
-  ourServiceHeaderCard2Text:
-    "Работим по проекта от началото до края според дизайна",
+    "Създаваме дизайна и проекта, вдъхновени от вашата визия.",
+  ourServiceHeaderCard2Text: "Ние управляваме проекта от начало до край.",
   ourServiceHeaderCard3Text:
-    "Продължаваме да поддържаме двора след завършването на проекта",
+    "Осигуряваме непрекъсната поддръжка на двора дори след завършване на проекта.",
   ourServiceHeaderCard4Text:
-    "Можем да работим с ландшафта, за да го направим според вашата визия",
+    "Можем да работим заедно върху ландшафтния дизайн, за да реализираме вашата визия.",
   ourServiceHeaderCard5Text:
-    "Създаваме персонализирани покривни градини според вашите изисквания",
+    "Създаваме индивидуални покривни градини, съобразени с вашите изисквания.",
   ourServiceHeaderCard6Text:
-    "Изграждаме персонализирани автоматизирани поливни системи за всеки проект",
+    "Проектираме индивидуални автоматизирани поливни системи за всякакви проекти.",
   galleryHeader: "Нашите проекти",
 };
 
@@ -49,11 +48,11 @@ export const english = {
   howItWorksContainerHeader2: "Sit back and let us do the work",
   howItWorksContainerHeader3: "Enjoy your new beautiful backyard",
   howItWorksContainerText:
-    "Call us so we can discuss your vision and create the design and project.",
+    "Reach out to us today to share your vision for your dream space. Let's discuss your ideas in detail, understand your preferences, and transform your imagination into a well-crafted design and project plan. Together, we'll create a personalized and stunning landscape that brings your vision to life, ensuring every detail is tailored to your needs and expectations.",
   howItWorksContainerText2:
-    "We will work to realize your vision of the perfect green space.",
+    "We are committed to turning your vision of the perfect green space into reality, blending creativity and precision to craft a lush, harmonious environment that reflects your unique style, meets your needs, and enhances your surroundings.",
   howItWorksContainerText3:
-    "Enjoy your new favourite place to spend your time.",
+    "Immerse yourself in the joy of your new favorite place—a beautifully designed space where you can relax, connect with loved ones, and create unforgettable memories for years to come.",
   ourServiceHeader: "Our Service",
   ourServiceHeaderCard1Header: "Design & Project",
   ourServiceHeaderCard2Header: "Full realization",
@@ -62,16 +61,15 @@ export const english = {
   ourServiceHeaderCard5Header: "Roof Landing",
   ourServiceHeaderCard6Header: "Watering Systems",
   ourServiceHeaderCard1Text:
-    "We are making the design and project based on your vision",
-  ourServiceHeaderCard2Text:
-    "We are working on the project from start to finish.",
+    "We are creating the design and project, inspired by your vision.",
+  ourServiceHeaderCard2Text: "We manage the project from start to finish.",
   ourServiceHeaderCard3Text:
-    "We continue to maintain the backyard after we finish the project",
+    "We provide ongoing maintenance for the backyard even after the project is completed.",
   ourServiceHeaderCard4Text:
-    "We can work with the landscape to make it as per your vision",
+    "We can collaborate on landscaping to bring your vision to life.",
   ourServiceHeaderCard5Text:
-    "We make custom roof gardens as per your requirements",
+    "We create custom roof gardens tailored to your needs.",
   ourServiceHeaderCard6Text:
-    "We make custom automated watering systems for any project",
+    "We design custom automated irrigation systems for any project.",
   galleryHeader: "Our Projects",
 };

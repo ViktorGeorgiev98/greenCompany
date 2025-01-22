@@ -7,6 +7,12 @@ const animation = {
   leftToRightSecondary: css`
     animation: leftToRight 1.5s ease-out forwards;
   `,
+  topToBottom: css`
+    animation: topToBottom 1.5s ease-out forwards;
+  `,
+  bottomUpwards: css`
+    animation: bottomUpwards 1.5s ease-out forwards;
+  `,
 };
 
 const StyledH1 = styled.h1`

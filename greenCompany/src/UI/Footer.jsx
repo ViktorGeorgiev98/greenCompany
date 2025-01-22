@@ -39,6 +39,7 @@ const StyledSocialRow = styled.div`
 `;
 
 const StyledIcon = styled.div`
+  cursor: pointer;
   /* width: 2rem;
   height: 2rem; */
 `;
@@ -58,6 +59,7 @@ const FooterH3 = styled.h3`
 const StyledFooterA = styled.a`
   color: var(--color-grey);
   transition: all 0.5s;
+  cursor: pointer;
   &:hover {
     color: var(--color-font-static);
   }
@@ -68,15 +70,21 @@ function Footer() {
       <StyledFooterColumn>
         <Logo />
         <StyledSocialRow>
-          <StyledIcon>
-            <AiFillFacebook fill="#36454F" size="2.5rem" />
-          </StyledIcon>
-          <StyledIcon>
-            <AiFillInstagram fill="#36454F" size="2.5rem" />
-          </StyledIcon>
-          <StyledIcon>
-            <AiFillTwitterCircle fill="#36454F" size="2.5rem" />
-          </StyledIcon>
+          <StyledFooterA href="#">
+            <StyledIcon>
+              <AiFillFacebook fill="#36454F" size="2.5rem" />
+            </StyledIcon>
+          </StyledFooterA>
+          <StyledFooterA href="#">
+            <StyledIcon>
+              <AiFillInstagram fill="#36454F" size="2.5rem" />
+            </StyledIcon>
+          </StyledFooterA>
+          <StyledFooterA href="#">
+            <StyledIcon>
+              <AiFillTwitterCircle fill="#36454F" size="2.5rem" />
+            </StyledIcon>
+          </StyledFooterA>
         </StyledSocialRow>
         <StyledP>
           Copyright © 2027 by Green Company, Inc. All rights reserved.

@@ -69,7 +69,7 @@ function HeroSection() {
           <Button
             type="secondary"
             animation="secondary"
-            onClick={() => navigate("home")}
+            onClick={() => navigate("/about")}
           >
             {language === "English"
               ? english.heroSectionButtonSecondary
