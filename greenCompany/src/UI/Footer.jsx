@@ -104,6 +104,18 @@ function Footer() {
         >
           Landscape architecture wiki
         </StyledFooterA>
+        <StyledFooterA
+          target="blank"
+          href="https://worldlandscapearchitect.com/what-is-landscape-architecture/?v=5523c88dd347"
+        >
+          What is landscape architecture?
+        </StyledFooterA>
+        <StyledFooterA
+          target="blank"
+          href="https://www.asla.org/aboutlandscapearchitecture.aspx"
+        >
+          Benefits of landscape architecture
+        </StyledFooterA>
       </StyledFooterColumn>
     </StyledFooter>
   );
