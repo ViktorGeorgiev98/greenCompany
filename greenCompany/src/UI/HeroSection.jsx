@@ -6,6 +6,9 @@ import Button from "./Button";
 import heroSectionBackyard from "../public/images/hero-section-backyard.jpg";
 import { bg, english } from "../Utils/constants";
 import { useNavigate } from "react-router";
+import { useModalContext } from "../Context/ModalContext";
+import Modal from "./Modal";
+import ContactForm from "./ContactForm";
 
 const StyledHeroSection = styled.section`
   width: 100%;
@@ -49,6 +52,7 @@ const StyledHeroI = styled.img`
 
 function HeroSection() {
   const { language } = useLanguageContext();
+  const { openModal, setOpenModal } = useModalContext();
   const navigate = useNavigate();
   return (
     <StyledHeroSection>
@@ -62,7 +66,11 @@ function HeroSection() {
             : bg.heroSectionSecondaryHeader}
         </Header>
         <ButtonsGroup animation="bottomUpwards" delay="1.75s">
-          <Button type="primary" animation="primary">
+          <Button
+            onClick={() => setOpenModal(true)}
+            type="primary"
+            animation="primary"
+          >
             {language === "English"
               ? english.heroSectionButtonMain
               : bg.heroSectionButtonMain}
@@ -84,6 +92,7 @@ function HeroSection() {
           alt="Beautiful image of a backyard"
         ></StyledHeroI>
       </StyledHeroSectionRightSide>
+      {openModal && <Modal>{<ContactForm />}</Modal>}
     </StyledHeroSection>
   );
 }

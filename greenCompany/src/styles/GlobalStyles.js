@@ -137,6 +137,18 @@ img {
     transform: translateY(0);
   }
 }
+
+@keyframes startSmallGoBig {
+  0% {
+    opacity: 0;
+    transform: scale(0.01);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 `;
 
 export default GlobalStyles;
