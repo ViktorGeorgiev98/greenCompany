@@ -60,8 +60,25 @@ const StyledFooterA = styled.a`
   color: var(--color-grey);
   transition: all 0.5s;
   cursor: pointer;
+  position: relative;
   &:hover {
     color: var(--color-font-static);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: var(--color-white);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
   }
 `;
 function Footer() {
