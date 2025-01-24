@@ -9,6 +9,7 @@ import { useNavigate } from "react-router";
 
 const StyledHeroSection = styled.section`
   width: 100%;
+  /* height: 75vh; */
   background: linear-gradient(
     to right,
     var(--color-main-light),

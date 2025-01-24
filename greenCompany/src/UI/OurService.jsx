@@ -72,7 +72,7 @@ const OurServiceCardText = styled.p`
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--color-grey);
-  padding: 2.5rem;
+  padding: 4.5rem;
   padding-top: 0;
 `;
 

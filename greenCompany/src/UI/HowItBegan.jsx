@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Header from "./Header";
 
 const StyledHowItBegan = styled.div`
-  padding: 6rem 12rem 12rem 12rem;
+  padding: 6rem 20rem 12rem 20rem;
   display: flex;
   flex-direction: column;
   gap: 5rem;
