@@ -28,7 +28,7 @@ const StyledModalContainer = styled.div`
   width: 60%;
   text-align: center;
   opacity: 0;
-  transform: scale(0.01);
+  transform: scale(0.0001);
   animation: startSmallGoBig ease-out 1.5s forwards;
   display: flex;
   justify-content: center;

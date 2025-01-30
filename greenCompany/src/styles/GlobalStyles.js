@@ -141,7 +141,7 @@ img {
 @keyframes startSmallGoBig {
   0% {
     opacity: 0;
-    transform: scale(0.01);
+    transform: scale(0.0001);
   }
 
   100% {

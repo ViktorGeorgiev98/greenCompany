@@ -3,6 +3,9 @@ import Header from "../UI/Header";
 import Button from "../UI/Button";
 import { useLanguageContext } from "../Context/LanguageContext";
 import { bg, english } from "../Utils/constants";
+import Modal from "./Modal";
+import ContactForm from "./ContactForm";
+import { useModalContext } from "../Context/ModalContext";
 
 const StyledWhatWeStriveFor = styled.div`
   padding: 6rem 20rem 12rem 20rem;
@@ -50,6 +53,7 @@ const WhatWeStriveForNumber = styled.div`
 
 function WhatWeStriveFor() {
   const { language } = useLanguageContext();
+  const { openModal, setOpenModal } = useModalContext();
   return (
     <StyledWhatWeStriveFor>
       <Header type="secondary" textColor="#1CAC78">
@@ -99,11 +103,16 @@ function WhatWeStriveFor() {
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
       </WhatWeStriveForCardContainer>
-      <Button type="primary" animation="primary">
+      <Button
+        onClick={() => setOpenModal(true)}
+        type="primary"
+        animation="primary"
+      >
         {language === "English"
           ? english.heroSectionButtonMain
           : bg.heroSectionButtonMain}
       </Button>
+      {openModal && <Modal>{<ContactForm />}</Modal>}
     </StyledWhatWeStriveFor>
   );
 }

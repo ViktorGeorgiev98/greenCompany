@@ -74,6 +74,11 @@ const StyledInput = styled.input`
 
   &:focus {
     /* border-bottom: 3px solid var(--color-main-dark); */
+    border: 1px solid var(--color-main-dark);
+  }
+  &:active {
+    /* border-bottom: 3px solid var(--color-main-dark); */
+    border: 1px solid var(--color-main-dark);
   }
 
   &:focus + ${StyledLabel}, &:valid + ${StyledLabel} {
@@ -94,6 +99,11 @@ const StyledTextArea = styled.textarea`
 
   &:focus {
     /* border-bottom: 3px solid var(--color-main-dark); */
+    border: 1px solid var(--color-main-dark);
+  }
+  &:active {
+    /* border-bottom: 3px solid var(--color-main-dark); */
+    border: 1px solid var(--color-main-dark);
   }
 
   &:focus + ${StyledLabel}, &:valid + ${StyledLabel} {
