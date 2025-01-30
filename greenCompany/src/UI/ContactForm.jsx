@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import Button from "./Button";
+// import Button from "./Button";
 import { useModalContext } from "../Context/ModalContext";
 import Header from "./Header";
+import { launchAlertCenteredWithFadeInDown } from "../Utils/alert";
 
 const StyledContactForm = styled.form`
   padding: 3rem;
@@ -135,8 +136,23 @@ function ContactForm() {
   const { openModal, setOpenModal } = useModalContext();
   function OnSubmitForm(e) {
     e.preventDefault();
+    const { value: email } = e.target.elements.email;
+    const { value: name } = e.target.elements.name;
+    const { value: question } = e.target.elements.question;
+    if (!email || !name || !question) {
+      launchAlertCenteredWithFadeInDown(
+        "fail",
+        "Please fill all required fields",
+        "All fields are required"
+      );
+      return;
+    }
     setOpenModal(false);
-    alert("Form submitted!");
+    launchAlertCenteredWithFadeInDown(
+      "success",
+      "Form submitted successfully!",
+      "Thank you contacting Green Company"
+    );
   }
   return (
     <StyledContactForm onSubmit={OnSubmitForm}>
@@ -149,18 +165,17 @@ function ContactForm() {
           id="email"
           //   placeholder="Your email"
           type="email"
-          required
         />
         <StyledLabel htmlFor="email">Your Email:</StyledLabel>
       </StyledLabelInputContainer>
 
       <StyledLabelInputContainer>
-        <StyledInput id="name" type="text" required />
+        <StyledInput id="name" type="text" />
         <StyledLabel htmlFor="name">Your Name:</StyledLabel>
       </StyledLabelInputContainer>
 
       <StyledLabelInputContainer>
-        <StyledTextArea id="question" required rows="6" cols="50" />
+        <StyledTextArea id="question" rows="6" cols="50" />
         <StyledLabel htmlFor="question">Your Question:</StyledLabel>
       </StyledLabelInputContainer>
 
