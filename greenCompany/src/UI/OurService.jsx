@@ -8,6 +8,10 @@ import wateringSystem from "../public/images/wateringSystem.jpg";
 import Header from "./Header";
 import { useLanguageContext } from "../Context/LanguageContext";
 import { bg, english } from "../Utils/constants";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const StyledOurService = styled.section`
   padding: 10rem 15rem;
   background: linear-gradient(
@@ -78,6 +82,9 @@ const OurServiceCardText = styled.p`
 
 function OurService() {
   const { language } = useLanguageContext();
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   return (
     <StyledOurService>
       <Header type="secondary" textColor="#fff">
@@ -86,7 +93,7 @@ function OurService() {
           : bg.ourServiceHeader}
       </Header>
       <StyledOutOfServiceGridRow>
-        <OurServiceCardItem>
+        <OurServiceCardItem data-aos="fade-up">
           <OurServiceCardImg
             src={projectPaper}
             alt="Project"
@@ -103,7 +110,7 @@ function OurService() {
               : bg.ourServiceHeaderCard1Text}
           </OurServiceCardText>
         </OurServiceCardItem>
-        <OurServiceCardItem>
+        <OurServiceCardItem data-aos="fade-up">
           <OurServiceCardImg
             src={fullRealization}
             alt="Project"
@@ -120,7 +127,7 @@ function OurService() {
               : bg.ourServiceHeaderCard2Text}
           </OurServiceCardText>
         </OurServiceCardItem>
-        <OurServiceCardItem>
+        <OurServiceCardItem data-aos="fade-up">
           <OurServiceCardImg
             src={gardenMaintenance}
             alt="Project"
@@ -137,7 +144,7 @@ function OurService() {
               : bg.ourServiceHeaderCard3Text}
           </OurServiceCardText>
         </OurServiceCardItem>
-        <OurServiceCardItem>
+        <OurServiceCardItem data-aos="fade-up">
           <OurServiceCardImg
             src={landscaping}
             alt="Project"
@@ -154,7 +161,7 @@ function OurService() {
               : bg.ourServiceHeaderCard4Text}
           </OurServiceCardText>
         </OurServiceCardItem>
-        <OurServiceCardItem>
+        <OurServiceCardItem data-aos="fade-up">
           <OurServiceCardImg
             src={rooftopGarden}
             alt="Project"
@@ -171,7 +178,7 @@ function OurService() {
               : bg.ourServiceHeaderCard5Text}
           </OurServiceCardText>
         </OurServiceCardItem>
-        <OurServiceCardItem>
+        <OurServiceCardItem data-aos="fade-up">
           <OurServiceCardImg
             src={wateringSystem}
             alt="Project"

@@ -6,6 +6,9 @@ import projectDone from "../public/images/projectDone.jpg";
 import { useLanguageContext } from "../Context/LanguageContext";
 import { bg, english } from "../Utils/constants";
 import { AiFillPhone } from "react-icons/ai";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const StyledHowItWorks = styled.section`
   /* height: 100vh; */
@@ -67,6 +70,9 @@ const StyledHowItWorksHeader = styled.h3`
 
 function HowItWorks() {
   const { language } = useLanguageContext();
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   return (
     <StyledHowItWorks>
       <Header type="secondary">
@@ -75,7 +81,7 @@ function HowItWorks() {
           : bg.howItWorksHeader}
       </Header>
       <StyledHowItWorksContainer>
-        <StyledHowItWorksTextContainer>
+        <StyledHowItWorksTextContainer data-aos="fade-right">
           <StyledHowItWorksTitle>01</StyledHowItWorksTitle>
           <StyledHowItWorksHeader>
             {language === "English"
@@ -88,13 +94,19 @@ function HowItWorks() {
               : bg.howItWorksContainerText}
           </StyledHowItWorksText>
         </StyledHowItWorksTextContainer>
-        <AiFillPhone fill="#1CAC78" size="35rem" />
+        <StyledHowItWorksTextContainer data-aos="fade-left">
+          <AiFillPhone fill="#1CAC78" size="35rem" />
+        </StyledHowItWorksTextContainer>
         {/* <StyledHowItWorksImg
           src={phoneCallImage}
           alt="Phone call image"
         ></StyledHowItWorksImg> */}
-        <StyledHowItWorksImg src={personWorking} alt="Person working" />
-        <StyledHowItWorksTextContainer>
+        <StyledHowItWorksImg
+          src={personWorking}
+          alt="Person working"
+          data-aos="fade-right"
+        />
+        <StyledHowItWorksTextContainer data-aos="fade-left">
           <StyledHowItWorksTitle>02</StyledHowItWorksTitle>
           <StyledHowItWorksHeader>
             {language === "English"
@@ -107,7 +119,7 @@ function HowItWorks() {
               : bg.howItWorksContainerText2}
           </StyledHowItWorksText>
         </StyledHowItWorksTextContainer>
-        <StyledHowItWorksTextContainer>
+        <StyledHowItWorksTextContainer data-aos="fade-right">
           <StyledHowItWorksTitle>03</StyledHowItWorksTitle>
           <StyledHowItWorksHeader>
             {language === "English"
@@ -120,7 +132,11 @@ function HowItWorks() {
               : bg.howItWorksContainerText3}
           </StyledHowItWorksText>
         </StyledHowItWorksTextContainer>
-        <StyledHowItWorksImg src={projectDone} alt="Project done" />
+        <StyledHowItWorksImg
+          src={projectDone}
+          alt="Project done"
+          data-aos="fade-left"
+        />
       </StyledHowItWorksContainer>
     </StyledHowItWorks>
   );
