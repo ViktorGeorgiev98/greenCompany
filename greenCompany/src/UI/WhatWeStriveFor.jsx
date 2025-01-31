@@ -6,6 +6,9 @@ import { bg, english } from "../Utils/constants";
 import Modal from "./Modal";
 import ContactForm from "./ContactForm";
 import { useModalContext } from "../Context/ModalContext";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const StyledWhatWeStriveFor = styled.div`
   padding: 6rem 20rem 12rem 20rem;
@@ -54,48 +57,51 @@ const WhatWeStriveForNumber = styled.div`
 function WhatWeStriveFor() {
   const { language } = useLanguageContext();
   const { openModal, setOpenModal } = useModalContext();
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   return (
     <StyledWhatWeStriveFor>
       <Header type="secondary" textColor="#1CAC78">
         What we strive for
       </Header>
       <WhatWeStriveForCardContainer>
-        <WhatWeStriveForCard>
+        <WhatWeStriveForCard data-aos="fade-up">
           <WhatWeStriveForNumber>01</WhatWeStriveForNumber>
           <StyledWhatWeStriveForP>
             Creative Innovation: Pushing the boundaries of design to craft
             unique and personalized landscapes.
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
-        <WhatWeStriveForCard>
+        <WhatWeStriveForCard data-aos="fade-up">
           <WhatWeStriveForNumber>02</WhatWeStriveForNumber>
           <StyledWhatWeStriveForP>
             Sustainability: Prioritizing eco-friendly practices and materials to
             protect the environment.
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
-        <WhatWeStriveForCard>
+        <WhatWeStriveForCard data-aos="fade-up">
           <WhatWeStriveForNumber>03</WhatWeStriveForNumber>
           <StyledWhatWeStriveForP>
             Quality Craftsmanship: Ensuring every detail is executed to
             perfection according to the design requested.
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
-        <WhatWeStriveForCard>
+        <WhatWeStriveForCard data-aos="fade-up">
           <WhatWeStriveForNumber>04</WhatWeStriveForNumber>
           <StyledWhatWeStriveForP>
             Customer-Centric Approach: Listening to our clients and tailoring
             solutions to meet their needs.
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
-        <WhatWeStriveForCard>
+        <WhatWeStriveForCard data-aos="fade-up">
           <WhatWeStriveForNumber>05</WhatWeStriveForNumber>
           <StyledWhatWeStriveForP>
             Community Impact: Creating spaces that bring people together and
             enhance their quality of life.
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
-        <WhatWeStriveForCard>
+        <WhatWeStriveForCard data-aos="fade-up">
           <WhatWeStriveForNumber>06</WhatWeStriveForNumber>
           <StyledWhatWeStriveForP>
             At Green Company, we believe that every outdoor space has the

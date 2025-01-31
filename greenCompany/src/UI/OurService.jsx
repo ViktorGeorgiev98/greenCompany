@@ -93,7 +93,7 @@ function OurService() {
           : bg.ourServiceHeader}
       </Header>
       <StyledOutOfServiceGridRow>
-        <OurServiceCardItem data-aos="fade-up">
+        <OurServiceCardItem>
           <OurServiceCardImg
             src={projectPaper}
             alt="Project"
@@ -110,7 +110,7 @@ function OurService() {
               : bg.ourServiceHeaderCard1Text}
           </OurServiceCardText>
         </OurServiceCardItem>
-        <OurServiceCardItem data-aos="fade-up">
+        <OurServiceCardItem>
           <OurServiceCardImg
             src={fullRealization}
             alt="Project"
@@ -127,7 +127,7 @@ function OurService() {
               : bg.ourServiceHeaderCard2Text}
           </OurServiceCardText>
         </OurServiceCardItem>
-        <OurServiceCardItem data-aos="fade-up">
+        <OurServiceCardItem>
           <OurServiceCardImg
             src={gardenMaintenance}
             alt="Project"
@@ -144,7 +144,7 @@ function OurService() {
               : bg.ourServiceHeaderCard3Text}
           </OurServiceCardText>
         </OurServiceCardItem>
-        <OurServiceCardItem data-aos="fade-up">
+        <OurServiceCardItem>
           <OurServiceCardImg
             src={landscaping}
             alt="Project"
@@ -161,7 +161,7 @@ function OurService() {
               : bg.ourServiceHeaderCard4Text}
           </OurServiceCardText>
         </OurServiceCardItem>
-        <OurServiceCardItem data-aos="fade-up">
+        <OurServiceCardItem>
           <OurServiceCardImg
             src={rooftopGarden}
             alt="Project"
@@ -178,7 +178,7 @@ function OurService() {
               : bg.ourServiceHeaderCard5Text}
           </OurServiceCardText>
         </OurServiceCardItem>
-        <OurServiceCardItem data-aos="fade-up">
+        <OurServiceCardItem>
           <OurServiceCardImg
             src={wateringSystem}
             alt="Project"
