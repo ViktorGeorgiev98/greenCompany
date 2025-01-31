@@ -5,6 +5,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { AiFillPhone } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
+import { useLanguageContext } from "../Context/LanguageContext";
 
 const StyledFooter = styled.footer`
   background: linear-gradient(
@@ -82,6 +83,7 @@ const StyledFooterA = styled.a`
   }
 `;
 function Footer() {
+  const { language } = useLanguageContext();
   return (
     <StyledFooter>
       <StyledFooterColumn>
@@ -104,11 +106,15 @@ function Footer() {
           </StyledFooterA>
         </StyledSocialRow>
         <StyledP>
-          Copyright © 2027 by Green Company, Inc. All rights reserved.
+          Copyright © 2027 by Green Company, Inc.{" "}
+          {language === "English"
+            ? "All rights reserved"
+            : "Всички права запазени"}
+          .
         </StyledP>
       </StyledFooterColumn>
       <StyledFooterColumn>
-        <FooterH3>Contacts</FooterH3>
+        <FooterH3>{language === "English" ? "Contacts" : "Контакти"}</FooterH3>
         <StyledP>123 Test Street Sofia Bulgaria</StyledP>
         <StyledSocialRow>
           <AiFillPhone fill="#36454F" size="2.5rem" />
@@ -122,24 +128,34 @@ function Footer() {
         </StyledSocialRow>
       </StyledFooterColumn>
       <StyledFooterColumn>
-        <FooterH3>More information about Landscape Architecture</FooterH3>
+        <FooterH3>
+          {language === "English"
+            ? "More information about Landscape Architecture"
+            : "Повече информация за ландшафтната архитектура"}
+        </FooterH3>
         <StyledFooterA
           target="blank"
           href="https://en.wikipedia.org/wiki/Landscape_architecture#:~:text=Landscape%20architecture%20is%20the%20design,%2Dbehavioural%2C%20or%20aesthetic%20outcomes."
         >
-          Landscape architecture wiki
+          {language === "English"
+            ? "Landscape architecture wiki"
+            : "Ландшафтна архитектура уикипедиа"}
         </StyledFooterA>
         <StyledFooterA
           target="blank"
           href="https://worldlandscapearchitect.com/what-is-landscape-architecture/?v=5523c88dd347"
         >
-          What is landscape architecture?
+          {language === "English"
+            ? "What is landscape architecture?"
+            : "Какво е ландшафтна архитектура"}
         </StyledFooterA>
         <StyledFooterA
           target="blank"
           href="https://www.asla.org/aboutlandscapearchitecture.aspx"
         >
-          Benefits of landscape architecture
+          {language === "English"
+            ? "Benefits of landscape architecture"
+            : "Ползите от ландшафтна архитектура"}
         </StyledFooterA>
       </StyledFooterColumn>
     </StyledFooter>

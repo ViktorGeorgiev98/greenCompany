@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import aboutUsImage from "../public/images/aboutUsHeroImage.jpg";
 import Header from "./Header";
+import { useLanguageContext } from "../Context/LanguageContext";
 
 const StyledAboutUsHeroSection = styled.section`
   width: 100%;
@@ -21,14 +22,16 @@ const StyledAboutUsHeroSection = styled.section`
 `;
 
 function AboutUsHeroSection() {
+  const { language } = useLanguageContext();
   return (
     <StyledAboutUsHeroSection>
       <Header animation="topToBottom" type="main">
-        About the company
+        {language === "English" ? "About the company" : "За компанията"}
       </Header>
       <Header type="tertiary" animation="bottomUpwards" delay="1s">
-        Discover the story behind our company's creation and the passion that
-        drives everything we do.
+        {language === "English"
+          ? "Discover the story behind our company's creation and the passion that drives everything we do."
+          : "Открийте историята зад създаването на нашата компания и страстта, която движи всичко, което правим."}
       </Header>
     </StyledAboutUsHeroSection>
   );

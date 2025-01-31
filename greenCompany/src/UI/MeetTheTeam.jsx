@@ -5,6 +5,7 @@ import avatar2 from "../public/images/avatar2.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { useLanguageContext } from "../Context/LanguageContext";
 
 const StyledMeetTheTeam = styled.div`
   padding: 6rem 12rem 12rem 12rem;
@@ -73,43 +74,53 @@ const StyledMeetTheTeamCardText = styled.p`
 `;
 
 function MeetTheTeam() {
+  const { language } = useLanguageContext();
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+
   return (
     <StyledMeetTheTeam>
       <Header type="secondary" textColor=" #FFFFFF">
-        Meet the team
+        {language === "English" ? "Meet the Team" : "Запознайте се с екипа"}
       </Header>
       <StyledMeetTheTeamContainer>
+        {/* George's Card */}
         <StyledMeetTheTeamCardItem data-aos="fade-right">
           <StyledMeetTheTeamCardImg src={avatar1} alt="George" />
           <StyledMeetTheTeamCardTitle>George</StyledMeetTheTeamCardTitle>
           <StyledMeetTheTeamCardText>
-            The Architect - with a deep passion for blending creativity and
-            functionality, George is the visionary architect behind our designs.
-            With a degree in Architecture from LASG Sofia,** he specializes in
-            crafting harmonious outdoor spaces that connect nature with modern
-            living. His meticulous attention to detail ensures that every
-            project is not only aesthetically stunning but also structurally
-            sound. George was inspired to enter the landscape design industry to
-            bring people closer to nature and create environments that foster
-            relaxation and inspiration.
+            {language === "English"
+              ? `With a deep passion for blending creativity and functionality, George is the visionary architect behind our designs. 
+                 He holds a degree in Architecture from LASG Sofia and specializes in crafting harmonious outdoor spaces that seamlessly connect nature with modern living. 
+                 His meticulous attention to detail ensures that every project is not only aesthetically stunning but also structurally sound. 
+                 Inspired to enter the landscape design industry, George strives to bring people closer to nature and create environments that foster relaxation and inspiration.`
+              : `С дълбока страст към съчетаването на креативност и функционалност, Георги е визионерът архитект зад нашите проекти.
+                 Той притежава диплома по архитектура от LASG София и се специализира в създаването на хармонични външни пространства, 
+                 които свързват природата с модерния начин на живот. Неговото внимание към детайла гарантира, че всеки проект 
+                 е не само естетически впечатляващ, но и конструктивно стабилен. Вдъхновен да навлезе в сферата на ландшафтния дизайн, 
+                 Георги се стреми да доближи хората до природата и да създаде среди, които насърчават релаксация и вдъхновение.`}
           </StyledMeetTheTeamCardText>
         </StyledMeetTheTeamCardItem>
+
+        {/* Dimitur's Card */}
         <StyledMeetTheTeamCardItem data-aos="fade-left">
           <StyledMeetTheTeamCardImg src={avatar2} alt="Dimitur" />
           <StyledMeetTheTeamCardTitle>Dimitur</StyledMeetTheTeamCardTitle>
           <StyledMeetTheTeamCardText>
-            The Tech Lead - as the physical work expert and technical lead,
-            Dimitur ensures that every design comes to life with precision and
-            excellence. With a background in Engineering from LASG Sofia and
-            years of hands-on experience in landscape construction, he is an
-            expert in turning complex ideas into reality. Dimitur's dedication
-            to quality craftsmanship and sustainable practices stems from a
-            desire to make outdoor spaces functional, beautiful, and
-            long-lasting. His passion for this industry comes from a love for
-            creating spaces where families and communities can thrive.
+            {language === "English"
+              ? `As the physical work expert and technical lead, Dimitur ensures that every design comes to life with precision and excellence. 
+                 With a background in Engineering from LASG Sofia and years of hands-on experience in landscape construction, 
+                 he is an expert in turning complex ideas into reality. Dimitur's dedication to quality craftsmanship and sustainable practices 
+                 stems from a desire to make outdoor spaces functional, beautiful, and long-lasting. 
+                 His passion for this industry comes from a love for creating spaces where families and communities can thrive.`
+              : `Като експерт по физическата работа и технически ръководител, Димитър гарантира, че всеки проект се реализира с прецизност и високи стандарти. 
+                 С образование по инженерство от LASG София и години практически опит в ландшафтното строителство, 
+                 той е експерт в превръщането на сложни идеи в реалност. Неговата отдаденост към качественото занаятчийство 
+                 и устойчивите практики произтича от желанието му да създава външни пространства, които са функционални, 
+                 красиви и дълготрайни. Страстта му към тази индустрия идва от любовта към създаването на среди, 
+                 където семейства и общности могат да процъфтяват.`}
           </StyledMeetTheTeamCardText>
         </StyledMeetTheTeamCardItem>
       </StyledMeetTheTeamContainer>
