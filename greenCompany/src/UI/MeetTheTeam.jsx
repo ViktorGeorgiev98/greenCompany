@@ -2,6 +2,9 @@ import styled from "styled-components";
 import Header from "./Header";
 import avatar1 from "../public/images/avatar1.jpg";
 import avatar2 from "../public/images/avatar2.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const StyledMeetTheTeam = styled.div`
   padding: 6rem 12rem 12rem 12rem;
@@ -70,13 +73,16 @@ const StyledMeetTheTeamCardText = styled.p`
 `;
 
 function MeetTheTeam() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   return (
     <StyledMeetTheTeam>
       <Header type="secondary" textColor=" #FFFFFF">
         Meet the team
       </Header>
       <StyledMeetTheTeamContainer>
-        <StyledMeetTheTeamCardItem>
+        <StyledMeetTheTeamCardItem data-aos="fade-right">
           <StyledMeetTheTeamCardImg src={avatar1} alt="George" />
           <StyledMeetTheTeamCardTitle>George</StyledMeetTheTeamCardTitle>
           <StyledMeetTheTeamCardText>
@@ -91,7 +97,7 @@ function MeetTheTeam() {
             relaxation and inspiration.
           </StyledMeetTheTeamCardText>
         </StyledMeetTheTeamCardItem>
-        <StyledMeetTheTeamCardItem>
+        <StyledMeetTheTeamCardItem data-aos="fade-left">
           <StyledMeetTheTeamCardImg src={avatar2} alt="Dimitur" />
           <StyledMeetTheTeamCardTitle>Dimitur</StyledMeetTheTeamCardTitle>
           <StyledMeetTheTeamCardText>
