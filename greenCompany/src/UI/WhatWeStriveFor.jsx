@@ -63,49 +63,55 @@ function WhatWeStriveFor() {
   return (
     <StyledWhatWeStriveFor>
       <Header type="secondary" textColor="#1CAC78">
-        What we strive for
+        {language === "English" ? " What we strive for" : "Нашите цели"}
       </Header>
       <WhatWeStriveForCardContainer>
         <WhatWeStriveForCard data-aos="fade-up">
           <WhatWeStriveForNumber>01</WhatWeStriveForNumber>
           <StyledWhatWeStriveForP>
-            Creative Innovation: Pushing the boundaries of design to craft
-            unique and personalized landscapes.
+            {language === "English"
+              ? "Creative Innovation: Pushing the boundaries of design to craft unique and personalized landscapes."
+              : "Креативна иновация: Разширяване на границите на дизайна за създаване на уникални и персонални ландшафти."}
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
         <WhatWeStriveForCard data-aos="fade-up">
           <WhatWeStriveForNumber>02</WhatWeStriveForNumber>
           <StyledWhatWeStriveForP>
-            Sustainability: Prioritizing eco-friendly practices and materials to
-            protect the environment.
+            {language === "English"
+              ? "Sustainability: Prioritizing eco-friendly practices and materials to protect the environment."
+              : "Устойчивост: Приоритизиране на екологично съобразени практики и материали за опазване на околната среда."}
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
         <WhatWeStriveForCard data-aos="fade-up">
           <WhatWeStriveForNumber>03</WhatWeStriveForNumber>
           <StyledWhatWeStriveForP>
-            Quality Craftsmanship: Ensuring every detail is executed to
-            perfection according to the design requested.
+            {language === "English"
+              ? "Quality Craftsmanship: Ensuring every detail is executed to perfection according to the design requested."
+              : "Качествена изработка: Гарантиране, че всеки детайл е изпълнен до съвършенство според изискания дизайн."}
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
         <WhatWeStriveForCard data-aos="fade-up">
           <WhatWeStriveForNumber>04</WhatWeStriveForNumber>
           <StyledWhatWeStriveForP>
-            Customer-Centric Approach: Listening to our clients and tailoring
-            solutions to meet their needs.
+            {language === "English"
+              ? "Customer-Centric Approach: Listening to our clients and tailoring solutions to meet their needs."
+              : "Подход, ориентиран към клиента: Слушаме нашите клиенти и създаваме решения, съобразени с техните нужди."}
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
         <WhatWeStriveForCard data-aos="fade-up">
           <WhatWeStriveForNumber>05</WhatWeStriveForNumber>
           <StyledWhatWeStriveForP>
-            Community Impact: Creating spaces that bring people together and
-            enhance their quality of life.
+            {language === "English"
+              ? "Community Impact: Creating spaces that bring people together and enhance their quality of life."
+              : "Въздействие върху общността: Създаваме красиви зелени пространства, които събират хората."}
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
         <WhatWeStriveForCard data-aos="fade-up">
           <WhatWeStriveForNumber>06</WhatWeStriveForNumber>
           <StyledWhatWeStriveForP>
-            At Green Company, we believe that every outdoor space has the
-            potential to inspire and connect people.
+            {language === "English"
+              ? "At Green Company, we believe that every outdoor space has the potential to inspire and connect people."
+              : "В Green Company вярваме, че всяко външно пространство има потенциала да вдъхновява и свързва хората."}
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
       </WhatWeStriveForCardContainer>
