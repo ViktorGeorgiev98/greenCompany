@@ -32,6 +32,15 @@ const StyledHeroSection = styled.section`
   @media ${media.tabletLandscape} {
     padding: 2.5rem 4rem 4rem 4rem;
   }
+
+  @media ${media.tabletPortrait} {
+    padding: 2rem 3rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
 `;
 
 const StyledHeroSectionLeftSide = styled.div`
@@ -41,6 +50,12 @@ const StyledHeroSectionLeftSide = styled.div`
   justify-content: start;
   gap: 5rem;
   /* width: 100%; */
+
+  @media ${media.tabletPortrait} {
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+  }
 `;
 const StyledHeroSectionRightSide = styled.div`
   /* width: 100%; */

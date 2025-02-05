@@ -36,6 +36,11 @@ const Button = styled.button`
     font-size: 1.8rem;
   }
 
+  @media ${media.tabletPortrait} {
+    padding: 1rem 3rem;
+    font-size: 2rem;
+  }
+
   &:hover {
     ${(props) => {
       return animation[props.animation] || "";
