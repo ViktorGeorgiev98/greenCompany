@@ -6,9 +6,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { useLanguageContext } from "../Context/LanguageContext";
+import { media } from "../Utils/constants";
 
 const StyledMeetTheTeam = styled.div`
-  padding: 6rem 12rem 12rem 12rem;
+  padding: 6rem 10rem 8rem 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,6 +21,10 @@ const StyledMeetTheTeam = styled.div`
     var(--color-main-light),
     var(--color-main-dark)
   );
+
+  @media ${media.laptop} {
+    padding: 6rem 6rem 6rem 6rem;
+  }
 `;
 
 const StyledMeetTheTeamContainer = styled.div`
@@ -30,6 +35,15 @@ const StyledMeetTheTeamContainer = styled.div`
   align-items: center;
   justify-items: center;
   grid-gap: 12rem;
+  @media ${media.laptop} {
+    padding: 0 3rem 3rem 3rem;
+    width: 90%;
+  }
+
+  @media ${media.tabletLandscape} {
+    padding: 0 3rem 3rem 3rem;
+    width: 100%;
+  }
 `;
 
 const StyledMeetTheTeamCardItem = styled.div`
@@ -49,6 +63,10 @@ const StyledMeetTheTeamCardItem = styled.div`
     transform: translateY(-2rem) scale(1.1);
   }
   overflow: hidden;
+
+  @media ${media.tabletLandscape} {
+    gap: 2rem;
+  }
 `;
 
 const StyledMeetTheTeamCardImg = styled.img`
@@ -63,6 +81,10 @@ const StyledMeetTheTeamCardTitle = styled.h3`
   font-weight: 600;
   color: var(--color-font-hover);
   padding: 1.5rem;
+
+  @media ${media.tabletLandscape} {
+    font-size: 2rem;
+  }
 `;
 
 const StyledMeetTheTeamCardText = styled.p`
@@ -71,6 +93,10 @@ const StyledMeetTheTeamCardText = styled.p`
   color: var(--color-grey);
   padding: 2.5rem;
   padding-top: 0;
+
+  @media ${media.tabletLandscape} {
+    padding: 2rem;
+  }
 `;
 
 function MeetTheTeam() {
@@ -94,13 +120,11 @@ function MeetTheTeam() {
             {language === "English"
               ? `With a deep passion for blending creativity and functionality, George is the visionary architect behind our designs. 
                  He holds a degree in Architecture from LASG Sofia and specializes in crafting harmonious outdoor spaces that seamlessly connect nature with modern living. 
-                 His meticulous attention to detail ensures that every project is not only aesthetically stunning but also structurally sound. 
-                 Inspired to enter the landscape design industry, George strives to bring people closer to nature and create environments that foster relaxation and inspiration.`
+                 His meticulous attention to detail ensures that every project is not only aesthetically stunning but also structurally sound. `
               : `С дълбока страст към съчетаването на креативност и функционалност, Георги е визионерът архитект зад нашите проекти.
                  Той притежава диплома по архитектура от LASG София и се специализира в създаването на хармонични външни пространства, 
                  които свързват природата с модерния начин на живот. Неговото внимание към детайла гарантира, че всеки проект 
-                 е не само естетически впечатляващ, но и конструктивно стабилен. Вдъхновен да навлезе в сферата на ландшафтния дизайн, 
-                 Георги се стреми да доближи хората до природата и да създаде среди, които насърчават релаксация и вдъхновение.`}
+                 е не само естетически впечатляващ, но и конструктивно стабилен.`}
           </StyledMeetTheTeamCardText>
         </StyledMeetTheTeamCardItem>
 
@@ -113,14 +137,12 @@ function MeetTheTeam() {
               ? `As the physical work expert and technical lead, Dimitur ensures that every design comes to life with precision and excellence. 
                  With a background in Engineering from LASG Sofia and years of hands-on experience in landscape construction, 
                  he is an expert in turning complex ideas into reality. Dimitur's dedication to quality craftsmanship and sustainable practices 
-                 stems from a desire to make outdoor spaces functional, beautiful, and long-lasting. 
-                 His passion for this industry comes from a love for creating spaces where families and communities can thrive.`
+                 stems from a desire to make outdoor spaces functional, beautiful, and long-lasting.`
               : `Като експерт по физическата работа и технически ръководител, Димитър гарантира, че всеки проект се реализира с прецизност и високи стандарти. 
                  С образование по инженерство от LASG София и години практически опит в ландшафтното строителство, 
                  той е експерт в превръщането на сложни идеи в реалност. Неговата отдаденост към качественото занаятчийство 
                  и устойчивите практики произтича от желанието му да създава външни пространства, които са функционални, 
-                 красиви и дълготрайни. Страстта му към тази индустрия идва от любовта към създаването на среди, 
-                 където семейства и общности могат да процъфтяват.`}
+                 красиви и дълготрайни.`}
           </StyledMeetTheTeamCardText>
         </StyledMeetTheTeamCardItem>
       </StyledMeetTheTeamContainer>

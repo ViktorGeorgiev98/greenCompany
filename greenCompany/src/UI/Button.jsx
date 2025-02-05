@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { media } from "../Utils/constants";
 
 const animation = {
   secondary: css`
@@ -25,6 +26,15 @@ const Button = styled.button`
   color: var(--color-grey);
   background-color: var(--color-font-static);
   transition: all 0.5s;
+
+  @media ${media.laptop} {
+    padding: 1rem 3rem;
+  }
+
+  @media ${media.tabletLandscape} {
+    padding: 1rem 1.5rem;
+    font-size: 1.8rem;
+  }
 
   &:hover {
     ${(props) => {

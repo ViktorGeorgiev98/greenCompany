@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { media } from "../Utils/constants";
 
 const animation = {
   leftToRight: css`
@@ -25,6 +26,14 @@ const StyledH1 = styled.h1`
   transform: translateX(-100%);
   ${(props) => animation[props.animation] || ""};
   animation-delay: ${(props) => props.delay || "0s"};
+
+  @media ${media.laptop} {
+    font-size: 5.8rem;
+  }
+
+  @media ${media.tabletLandscape} {
+    font-size: 4.5rem;
+  }
 `;
 
 const StyledH2 = styled.h2`
@@ -40,10 +49,14 @@ const StyledH2 = styled.h2`
     color: var(--color-font-hover);
     transform: scale(1.05) rotate(5deg);
   }
+
+  @media ${media.tabletLandscape} {
+    font-size: 2.2rem;
+  }
 `;
 
 const StyledHeaderTertiary = styled.h3`
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: ${(props) => props.textColor || "#FFFFFF"};
   opacity: 0;
@@ -52,6 +65,14 @@ const StyledHeaderTertiary = styled.h3`
     ${animation[props.animation] || ""}
     animation-delay: ${props.delay || "0s"};
   `}
+
+  @media ${media.laptop} {
+    font-size: 2rem;
+  }
+
+  @media ${media.tabletLandscape} {
+    font-size: 1.8rem;
+  }
 `;
 
 function Header({ type, animation, delay, textColor, children }) {

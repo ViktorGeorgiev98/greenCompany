@@ -7,7 +7,7 @@ import rooftopGarden from "../public/images/roofTopGarden.jpg";
 import wateringSystem from "../public/images/wateringSystem.jpg";
 import Header from "./Header";
 import { useLanguageContext } from "../Context/LanguageContext";
-import { bg, english } from "../Utils/constants";
+import { bg, english, media } from "../Utils/constants";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -24,6 +24,10 @@ const StyledOurService = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @media ${media.tabletLandscape} {
+    padding: 7rem 10rem;
+  }
 `;
 
 const StyledOutOfServiceGridRow = styled.div`
@@ -35,6 +39,10 @@ const StyledOutOfServiceGridRow = styled.div`
   align-items: center;
   max-width: 80%;
   margin-top: 6rem;
+
+  @media ${media.tabletLandscape} {
+    max-width: 100%;
+  }
 `;
 
 const OurServiceCardItem = styled.div`
@@ -42,7 +50,7 @@ const OurServiceCardItem = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2.5rem;
   /* flex-wrap: wrap; */
   /* max-width: 50%; */
   max-height: 90%;
@@ -56,6 +64,15 @@ const OurServiceCardItem = styled.div`
     transform: translateY(-2rem) scale(1.1);
   }
   overflow: hidden;
+
+  @media ${media.laptop} {
+    gap: 2rem;
+  }
+
+  @media ${media.tabletLandscape} {
+    gap: 1.5rem;
+    max-height: 90%;
+  }
 `;
 
 const OurServiceCardImg = styled.img`
@@ -63,6 +80,12 @@ const OurServiceCardImg = styled.img`
   width: 100%;
   height: auto;
   overflow: hidden;
+
+  @media ${media.laptop} {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 `;
 
 const OurServiceCardTitle = styled.h3`
@@ -70,14 +93,34 @@ const OurServiceCardTitle = styled.h3`
   font-weight: 600;
   color: var(--color-font-hover);
   padding: 1.5rem;
+
+  @media ${media.laptop} {
+    padding: 1rem;
+  }
+
+  @media ${media.tabletLandscape} {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
 `;
 
 const OurServiceCardText = styled.p`
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--color-grey);
-  padding: 4.5rem;
+  padding: 3.5rem;
   padding-top: 0;
+
+  @media ${media.laptop} {
+    padding: 3rem;
+    padding-top: 0;
+  }
+
+  @media ${media.tabletLandscape} {
+    font-size: 1.6rem;
+    padding: 2rem;
+    padding-top: 0;
+  }
 `;
 
 function OurService() {

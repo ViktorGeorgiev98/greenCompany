@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useModalContext } from "../Context/ModalContext";
 import Header from "./Header";
 import { launchAlertCenteredWithFadeInDown } from "../Utils/alert";
+import { useLanguageContext } from "../Context/LanguageContext";
 
 const StyledContactForm = styled.form`
   padding: 3rem;
@@ -126,6 +127,27 @@ const FormButton = styled.button`
 
 function ContactForm() {
   const { openModal, setOpenModal } = useModalContext();
+  const { language } = useLanguageContext();
+  const formTitleFail = `${
+    language === "English"
+      ? "Please fill all required fields"
+      : "Моля попълнете всички полета"
+  }`;
+  const formМеssageFail = `${
+    language === "English"
+      ? "All fields are required"
+      : "Всички полета са задължителни"
+  }`;
+  const formTitleSuccess = `${
+    language === "English"
+      ? "Form submitted successfully!"
+      : "Формата успешно изпратена!"
+  }`;
+  const formМеssageSuccess = `${
+    language === "English"
+      ? "Thank you for contacting Green Company"
+      : "Благодарим, че се свързахте с Green Company"
+  }`;
   function OnSubmitForm(e) {
     e.preventDefault();
     const { value: email } = e.target.elements.email;
@@ -134,7 +156,7 @@ function ContactForm() {
     if (!email || !name || !question) {
       launchAlertCenteredWithFadeInDown(
         "fail",
-        "Please fill all required fields",
+        formTitleFail,
         "All fields are required"
       );
       return;
@@ -142,8 +164,8 @@ function ContactForm() {
     setOpenModal(false);
     launchAlertCenteredWithFadeInDown(
       "success",
-      "Form submitted successfully!",
-      "Thank you contacting Green Company"
+      formTitleSuccess,
+      formМеssageSuccess
     );
   }
   return (

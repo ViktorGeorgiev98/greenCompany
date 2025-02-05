@@ -4,7 +4,7 @@ import phoneCallImage from "../public/images/phoneCall.jpg";
 import personWorking from "../public/images/personWorking.jpg";
 import projectDone from "../public/images/projectDone.jpg";
 import { useLanguageContext } from "../Context/LanguageContext";
-import { bg, english } from "../Utils/constants";
+import { bg, english, media } from "../Utils/constants";
 import { AiFillPhone } from "react-icons/ai";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -20,6 +20,14 @@ const StyledHowItWorks = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  /* @media ${media.tabletLandscape} {
+    padding: 7rem 10rem 7rem 10rem;
+  } */
+
+  @media ${media.tabletLandscape} {
+    padding: 2.5rem 6rem 6rem 6rem;
+  }
 `;
 
 const StyledHowItWorksContainer = styled.div`
@@ -31,6 +39,10 @@ const StyledHowItWorksContainer = styled.div`
   align-items: center;
   /* width: 100%;
   height: auto; */
+  @media ${media.tabletLandscape} {
+    margin-top: 5rem;
+    grid-gap: 8rem;
+  }
 `;
 
 const StyledHowItWorksImg = styled.img`
@@ -53,6 +65,14 @@ const StyledHowItWorksText = styled.p`
   font-weight: 400;
   color: var(--color-grey);
   margin-top: 3rem;
+
+  @media ${media.laptop} {
+    font-size: 1.6rem;
+  }
+
+  @media ${media.tabletLandscape} {
+    font-size: 1.6rem;
+  }
 `;
 
 const StyledHowItWorksTitle = styled.p`
@@ -60,12 +80,20 @@ const StyledHowItWorksTitle = styled.p`
   font-weight: 800;
   letter-spacing: 1rem;
   font-size: 9rem;
+
+  @media ${media.tabletLandscape} {
+    font-size: 6rem;
+  }
 `;
 
 const StyledHowItWorksHeader = styled.h3`
   color: var(--color-grey);
   font-size: 3.5rem;
   font-weight: 600;
+
+  @media ${media.tabletLandscape} {
+    font-size: 2.5rem;
+  }
 `;
 
 function HowItWorks() {

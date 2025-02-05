@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { useLanguageContext } from "../Context/LanguageContext";
+import { media } from "../Utils/constants";
 
 const StyledHowItBegan = styled.div`
   padding: 6rem 20rem 12rem 20rem;
@@ -20,6 +21,10 @@ const StyledHowItBeganP = styled.p`
   color: var(--color-grey);
   font-style: italic;
   font-weight: 400;
+
+  @media ${media.tabletLandscape} {
+    font-size: 1.6rem;
+  }
 `;
 
 function HowItBegan() {

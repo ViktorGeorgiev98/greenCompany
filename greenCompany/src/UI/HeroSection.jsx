@@ -4,7 +4,7 @@ import Header from "./Header";
 import ButtonsGroup from "./ButtonsGroup";
 import Button from "./Button";
 import heroSectionBackyard from "../public/images/hero-section-backyard.jpg";
-import { bg, english } from "../Utils/constants";
+import { bg, english, media } from "../Utils/constants";
 import { useNavigate } from "react-router";
 import { useModalContext } from "../Context/ModalContext";
 import Modal from "./Modal";
@@ -24,6 +24,14 @@ const StyledHeroSection = styled.section`
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 10rem;
   padding: 2.5rem 12rem 7.5rem 12rem;
+
+  @media ${media.laptop} {
+    padding: 2.5rem 8rem 7.5rem 8rem;
+  }
+
+  @media ${media.tabletLandscape} {
+    padding: 2.5rem 4rem 4rem 4rem;
+  }
 `;
 
 const StyledHeroSectionLeftSide = styled.div`

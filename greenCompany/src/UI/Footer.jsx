@@ -6,6 +6,7 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { AiFillPhone } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { useLanguageContext } from "../Context/LanguageContext";
+import { media } from "../Utils/constants";
 
 const StyledFooter = styled.footer`
   background: linear-gradient(
@@ -23,6 +24,10 @@ const StyledFooter = styled.footer`
   align-items: center;
   justify-items: center;
   grid-column-gap: 4rem;
+
+  @media ${media.tabletLandscape} {
+    padding: 8rem;
+  }
 `;
 const StyledFooterColumn = styled.div`
   display: flex;

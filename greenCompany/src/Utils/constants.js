@@ -62,7 +62,8 @@ export const english = {
   ourServiceHeaderCard6Header: "Watering Systems",
   ourServiceHeaderCard1Text:
     "We are creating the design and project, inspired by your vision.",
-  ourServiceHeaderCard2Text: "We manage the project from start to finish.",
+  ourServiceHeaderCard2Text:
+    "We manage the project from the start to the finish.",
   ourServiceHeaderCard3Text:
     "We provide ongoing maintenance for the backyard even after the project is completed.",
   ourServiceHeaderCard4Text:
@@ -74,30 +75,16 @@ export const english = {
   galleryHeader: "Our Projects",
 };
 
-// About the Company
+export const MediqQuerriesSizes = {
+  mobile: "50em",
+  tabletPortrait: "85em",
+  tabletLandscape: "105em",
+  laptop: "139em",
+};
 
-// Meet the Creators
-
-// [Name], The ArchitectWith a deep passion for blending creativity and functionality, [Name] is the visionary architect behind our designs. With a degree in Architecture from [University N*ame],** [he/she/they] specializes in crafting harmonious outdoor spaces that connect nature with modern living. [His/Her/Their] meticulous attention to detail ensures that every project is not only aesthetically stunning but also structurally sound. [*Name] was inspired to enter the landscape design industry to bring people closer to nature and create environments that foster relaxation and inspiration.
-
-// [Name], The Tech LeadAs the physical work expert and technical lead, [Name] ensures that every design comes to life with precision and excellence. With a background in Engineering from [University Name] and years of hands-on experience in landscape construction, [he/she/they] is an expert in turning complex ideas into reality. [Name]'s dedication to quality craftsmanship and sustainable practices stems from a desire to make outdoor spaces functional, beautiful, and long-lasting. [His/Her/Their] passion for this industry comes from a love for creating spaces where families and communities can thrive.
-
-// How It All Began
-
-// Our story started with a shared vision between two friends who combined their unique talents to transform ordinary outdoor spaces into extraordinary experiences. [Name] brought architectural expertise, while [Name] added the technical know-how and a hands-on approach. Together, they founded [Company Name] with the mission to redefine landscape design and construction.
-
-// From humble beginnings to becoming a trusted name in the industry, our journey has been guided by a commitment to innovation, sustainability, and customer satisfaction. Every project is an opportunity to bring a client’s vision to life while respecting the natural environment.
-
-// What Drives Us Forward
-
-// Creative Innovation: Pushing the boundaries of design to craft unique and personalized landscapes.
-
-// Sustainability: Prioritizing eco-friendly practices and materials to protect the environment.
-
-// Quality Craftsmanship: Ensuring every detail is executed to perfection, from design to construction.
-
-// Customer-Centric Approach: Listening to our clients and tailoring solutions to meet their needs.
-
-// Community Impact: Creating spaces that bring people together and enhance their quality of life.
-
-// At [Company Name], we believe that every outdoor space has the potential to inspire, rejuvenate, and connect people with the beauty of the natural world. Together, we build more than landscapes—we build experiences.
+export const media = {
+  mobile: `(max-width: ${MediqQuerriesSizes.mobile})`,
+  tabletPortrait: `(max-width: ${MediqQuerriesSizes.tabletPortrait})`,
+  tabletLandscape: `(max-width: ${MediqQuerriesSizes.tabletLandscape})`,
+  laptop: `(max-width: ${MediqQuerriesSizes.laptop})`,
+};

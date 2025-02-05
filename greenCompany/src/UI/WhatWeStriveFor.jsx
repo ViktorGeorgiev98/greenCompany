@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Header from "../UI/Header";
 import Button from "../UI/Button";
 import { useLanguageContext } from "../Context/LanguageContext";
-import { bg, english } from "../Utils/constants";
+import { bg, english, media } from "../Utils/constants";
 import Modal from "./Modal";
 import ContactForm from "./ContactForm";
 import { useModalContext } from "../Context/ModalContext";
@@ -18,6 +18,9 @@ const StyledWhatWeStriveFor = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  @media (max-width: 160em) {
+    padding: 4rem 12rem 5rem 12rem;
+  }
 `;
 
 const StyledWhatWeStriveForP = styled.p`
@@ -25,6 +28,14 @@ const StyledWhatWeStriveForP = styled.p`
   color: var(--color-grey);
   font-style: italic;
   font-weight: 400;
+
+  @media (max-width: 160em) {
+    font-size: 1.6rem;
+  }
+
+  @media ${media.laptop} {
+    font-size: 1.5rem;
+  }
 `;
 
 const WhatWeStriveForCardContainer = styled.div`
@@ -34,6 +45,10 @@ const WhatWeStriveForCardContainer = styled.div`
   grid-gap: 5rem;
   justify-items: center;
   align-items: center;
+
+  @media ${media.tabletLandscape} {
+    width: 100%;
+  }
 `;
 
 const WhatWeStriveForCard = styled.div`
@@ -45,6 +60,25 @@ const WhatWeStriveForCard = styled.div`
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   padding: 3rem;
+
+  @media (max-width: 160em) {
+    padding: 2.8rem;
+  }
+
+  @media ${media.laptop} {
+    padding: 3rem 0.8rem;
+    /* padding: 3rem 2rem;
+    flex-direction: column; */
+  }
+
+  @media (max-width: 120em) {
+    padding: 3rem 2rem;
+    flex-direction: column;
+  }
+
+  @media ${media.tabletLandscape} {
+    gap: 2rem;
+  }
 `;
 
 const WhatWeStriveForNumber = styled.div`
@@ -52,6 +86,10 @@ const WhatWeStriveForNumber = styled.div`
   font-size: 5rem;
   color: var(--color-main-dark);
   align-self: start;
+
+  @media ${media.tabletLandscape} {
+    font-size: 4rem;
+  }
 `;
 
 function WhatWeStriveFor() {
@@ -70,7 +108,7 @@ function WhatWeStriveFor() {
           <WhatWeStriveForNumber>01</WhatWeStriveForNumber>
           <StyledWhatWeStriveForP>
             {language === "English"
-              ? "Creative Innovation: Pushing the boundaries of design to craft unique and personalized landscapes."
+              ? "Creative Innovation: Pushing the boundaries of design to craft unique and personalized nice landscapes."
               : "Креативна иновация: Разширяване на границите на дизайна за създаване на уникални и персонални ландшафти."}
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
@@ -78,7 +116,7 @@ function WhatWeStriveFor() {
           <WhatWeStriveForNumber>02</WhatWeStriveForNumber>
           <StyledWhatWeStriveForP>
             {language === "English"
-              ? "Sustainability: Prioritizing eco-friendly practices and materials to protect the environment."
+              ? "Sustainability: Prioritizing eco-friendly practices and materials which protect nature and the environment."
               : "Устойчивост: Приоритизиране на екологично съобразени практики и материали за опазване на околната среда."}
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
@@ -87,7 +125,7 @@ function WhatWeStriveFor() {
           <StyledWhatWeStriveForP>
             {language === "English"
               ? "Quality Craftsmanship: Ensuring every detail is executed to perfection according to the design requested."
-              : "Качествена изработка: Гарантиране, че всеки детайл е изпълнен до съвършенство според изискания дизайн."}
+              : "Качествена изработка: Гарантиране, че всеки детайл е изпълнен до съвършенство според изискванията на дизайнът."}
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
         <WhatWeStriveForCard data-aos="fade-up">
@@ -103,7 +141,7 @@ function WhatWeStriveFor() {
           <StyledWhatWeStriveForP>
             {language === "English"
               ? "Community Impact: Creating spaces that bring people together and enhance their quality of life."
-              : "Въздействие върху общността: Създаваме красиви зелени пространства, които събират хората."}
+              : "Въздействие върху общността: Създаваме красиви зелени пространства, които събират и сплотяват хората."}
           </StyledWhatWeStriveForP>
         </WhatWeStriveForCard>
         <WhatWeStriveForCard data-aos="fade-up">
