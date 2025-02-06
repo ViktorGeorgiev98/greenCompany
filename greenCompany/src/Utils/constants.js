@@ -77,13 +77,15 @@ export const english = {
 
 export const MediqQuerriesSizes = {
   mobile: "50em",
-  tabletPortrait: "85em",
-  tabletLandscape: "105em",
+  mobileBig: "60em",
+  tabletPortrait: "80em",
+  tabletLandscape: "110em",
   laptop: "139em",
 };
 
 export const media = {
   mobile: `(max-width: ${MediqQuerriesSizes.mobile})`,
+  mobileBig: `(max-width: ${MediqQuerriesSizes.mobileBig})`,
   tabletPortrait: `(max-width: ${MediqQuerriesSizes.tabletPortrait})`,
   tabletLandscape: `(max-width: ${MediqQuerriesSizes.tabletLandscape})`,
   laptop: `(max-width: ${MediqQuerriesSizes.laptop})`,

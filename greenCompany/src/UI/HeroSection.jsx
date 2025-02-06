@@ -26,7 +26,7 @@ const StyledHeroSection = styled.section`
   padding: 2.5rem 12rem 7.5rem 12rem;
 
   @media ${media.laptop} {
-    padding: 2.5rem 8rem 7.5rem 8rem;
+    padding: 2.5rem 12rem 8rem 12rem;
   }
 
   @media ${media.tabletLandscape} {
@@ -54,7 +54,7 @@ const StyledHeroSectionLeftSide = styled.div`
   @media ${media.tabletPortrait} {
     align-items: center;
     justify-content: center;
-    padding: 4rem;
+    /* padding: 4rem; */
   }
 `;
 const StyledHeroSectionRightSide = styled.div`
