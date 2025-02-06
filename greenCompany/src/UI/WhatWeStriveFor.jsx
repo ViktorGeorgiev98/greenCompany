@@ -26,6 +26,11 @@ const StyledWhatWeStriveFor = styled.div`
     gap: 3rem;
     padding: 4rem 6rem 6rem 6rem;
   }
+
+  @media ${media.mobile} {
+    gap: 3rem;
+    padding: 2rem 3rem 3rem 3rem;
+  }
 `;
 
 const StyledWhatWeStriveForP = styled.p`

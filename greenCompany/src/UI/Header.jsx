@@ -36,7 +36,7 @@ const StyledH1 = styled.h1`
   }
 
   @media ${media.mobile} {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 `;
 
@@ -59,7 +59,7 @@ const StyledH2 = styled.h2`
   }
 
   @media ${media.mobile} {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 `;
 
