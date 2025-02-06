@@ -76,11 +76,11 @@ export const english = {
 };
 
 export const MediqQuerriesSizes = {
-  mobile: "50em",
-  mobileBig: "60em",
-  tabletPortrait: "80em",
-  tabletLandscape: "110em",
-  laptop: "139em",
+  mobile: "35em", // 550 px / 16px
+  mobileBig: "41em", // 660 px / 16px
+  tabletPortrait: "56em", // 900 px / 16px
+  tabletLandscape: "75em", // 1200px / 16px
+  laptop: "88em", // 1400 px / 16px
 };
 
 export const media = {

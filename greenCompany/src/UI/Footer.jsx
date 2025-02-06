@@ -26,7 +26,11 @@ const StyledFooter = styled.footer`
   grid-column-gap: 4rem;
 
   @media ${media.tabletLandscape} {
-    padding: 8rem;
+    padding: 6rem;
+  }
+
+  @media ${media.tabletPortrait} {
+    padding: 3rem;
   }
 `;
 const StyledFooterColumn = styled.div`
@@ -35,6 +39,9 @@ const StyledFooterColumn = styled.div`
   justify-content: start;
   align-items: start;
   gap: 3rem;
+  @media ${media.tabletLandscape} {
+    align-self: center;
+  }
 `;
 
 const StyledSocialRow = styled.div`
@@ -42,6 +49,10 @@ const StyledSocialRow = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
+
+  @media ${media.tabletPortrait} {
+    gap: 1rem;
+  }
 `;
 
 const StyledIcon = styled.div`
@@ -54,12 +65,20 @@ const StyledP = styled.p`
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--color-grey);
+
+  @media ${media.tabletPortrait} {
+    font-size: 1.4rem;
+  }
 `;
 
 const FooterH3 = styled.h3`
   color: var(--color-grey);
   font-weight: 600;
   font-size: 2rem;
+
+  @media ${media.tabletPortrait} {
+    font-size: 1.6rem;
+  }
 `;
 
 const StyledFooterA = styled.a`

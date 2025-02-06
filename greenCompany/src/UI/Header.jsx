@@ -32,7 +32,7 @@ const StyledH1 = styled.h1`
   }
 
   @media ${media.tabletLandscape} {
-    font-size: 4.5rem;
+    font-size: 5rem;
   }
 `;
 
@@ -51,7 +51,7 @@ const StyledH2 = styled.h2`
   }
 
   @media ${media.tabletLandscape} {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
 `;
 
@@ -71,6 +71,9 @@ const StyledHeaderTertiary = styled.h3`
   }
 
   @media ${media.tabletLandscape} {
+    font-size: 2rem;
+  }
+  @media ${media.tabletPortrait} {
     font-size: 1.8rem;
   }
 `;

@@ -30,8 +30,8 @@ function AboutUsHeroSection() {
       </Header>
       <Header type="tertiary" animation="bottomUpwards" delay="1s">
         {language === "English"
-          ? "Discover the story behind our company's creation and the passion that drives everything we do."
-          : "Открийте историята зад създаването на  компанията и страстта движейки всичко, което правим."}
+          ? "Discover the story behind our company's creation and the passion that drives us forward."
+          : "Открийте историята зад създаването на  компанията и страстта за всичко, което правим."}
       </Header>
     </StyledAboutUsHeroSection>
   );

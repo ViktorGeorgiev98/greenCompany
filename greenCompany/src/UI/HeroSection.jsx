@@ -34,7 +34,7 @@ const StyledHeroSection = styled.section`
   }
 
   @media ${media.tabletPortrait} {
-    padding: 2rem 3rem 3rem 3rem;
+    padding: 2rem 6rem 6rem 6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +48,7 @@ const StyledHeroSectionLeftSide = styled.div`
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  gap: 5rem;
+  gap: 4rem;
   /* width: 100%; */
 
   @media ${media.tabletPortrait} {
@@ -58,6 +58,10 @@ const StyledHeroSectionLeftSide = styled.div`
   }
 `;
 const StyledHeroSectionRightSide = styled.div`
+  @media ${media.tabletPortrait} {
+    width: 85%;
+    height: auto;
+  }
   /* width: 100%; */
 `;
 

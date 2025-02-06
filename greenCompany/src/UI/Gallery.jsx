@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Header from "./Header";
 import { useLanguageContext } from "../Context/LanguageContext";
-import { bg, english } from "../Utils/constants";
+import { bg, english, media } from "../Utils/constants";
 import gallery1 from "../public/images/gallerySection/gallery1-min.jpg";
 import gallery2 from "../public/images/gallerySection/gallery2-min.jpg";
 import gallery3 from "../public/images/gallerySection/gallery3-min.jpg";
@@ -29,6 +29,12 @@ const StyledGallerySection = styled.section`
   align-items: center;
   gap: 4rem;
   flex-direction: column;
+  @media ${media.tabletLandscape} {
+    padding: 3rem;
+  }
+  @media ${media.tabletPortrait} {
+    padding: 2rem;
+  }
 `;
 
 const StyledGallery = styled.div`

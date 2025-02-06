@@ -44,6 +44,11 @@ const StyledMeetTheTeamContainer = styled.div`
     padding: 0 3rem 3rem 3rem;
     width: 100%;
   }
+
+  @media ${media.tabletPortrait} {
+    padding: 0 2rem 2rem 2rem;
+    width: 100%;
+  }
 `;
 
 const StyledMeetTheTeamCardItem = styled.div`
@@ -67,6 +72,10 @@ const StyledMeetTheTeamCardItem = styled.div`
   @media ${media.tabletLandscape} {
     gap: 2rem;
   }
+
+  @media ${media.tabletPortrait} {
+    gap: 1.5rem;
+  }
 `;
 
 const StyledMeetTheTeamCardImg = styled.img`
@@ -85,6 +94,10 @@ const StyledMeetTheTeamCardTitle = styled.h3`
   @media ${media.tabletLandscape} {
     font-size: 2rem;
   }
+
+  @media ${media.tabletPortrait} {
+    font-size: 1.8rem;
+  }
 `;
 
 const StyledMeetTheTeamCardText = styled.p`
@@ -96,6 +109,11 @@ const StyledMeetTheTeamCardText = styled.p`
 
   @media ${media.tabletLandscape} {
     padding: 2rem;
+  }
+
+  @media ${media.tabletPortrait} {
+    font-size: 1.4rem;
+    padding: 1.6rem;
   }
 `;
 

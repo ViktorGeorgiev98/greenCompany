@@ -21,6 +21,11 @@ const StyledWhatWeStriveFor = styled.div`
   @media (max-width: 160em) {
     padding: 4rem 12rem 5rem 12rem;
   }
+
+  @media ${media.tabletPortrait} {
+    gap: 3rem;
+    padding: 4rem 6rem 6rem 6rem;
+  }
 `;
 
 const StyledWhatWeStriveForP = styled.p`
@@ -30,11 +35,22 @@ const StyledWhatWeStriveForP = styled.p`
   font-weight: 400;
 
   @media (max-width: 160em) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
   }
 
   @media ${media.laptop} {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+  @media ${media.tabletLandscape} {
+    font-size: 1.6rem;
+    letter-spacing: 1.3px;
+  }
+
+  @media ${media.tabletPortrait} {
+    font-size: 1.4rem;
+    letter-spacing: 1.1px;
   }
 `;
 
@@ -56,6 +72,7 @@ const WhatWeStriveForCard = styled.div`
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  flex-direction: column;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -66,18 +83,25 @@ const WhatWeStriveForCard = styled.div`
   }
 
   @media ${media.laptop} {
-    padding: 3rem 0.8rem;
-    /* padding: 3rem 2rem;
-    flex-direction: column; */
-  }
-
-  @media (max-width: 120em) {
-    padding: 3rem 2rem;
+    padding: 3rem;
+    gap: 0.2rem;
     flex-direction: column;
   }
 
+  /* @media (max-width: 120em) {
+    padding: 3rem 2rem;
+    flex-direction: column;
+  } */
+
   @media ${media.tabletLandscape} {
-    gap: 2rem;
+    padding: 2rem;
+    gap: 0.2rem;
+    flex-direction: column;
+  }
+  @media ${media.tabletPortrait} {
+    padding: 1.5rem;
+    gap: 0.2rem;
+    flex-direction: column;
   }
 `;
 
@@ -89,6 +113,9 @@ const WhatWeStriveForNumber = styled.div`
 
   @media ${media.tabletLandscape} {
     font-size: 4rem;
+  }
+  @media ${media.tabletPortrait} {
+    font-size: 3.5rem;
   }
 `;
 
