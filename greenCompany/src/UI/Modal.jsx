@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useModalContext } from "../Context/ModalContext";
 import Button from "./Button";
+import { media } from "../Utils/constants";
 
 const StyledModalBackground = styled.div`
   position: fixed;
@@ -36,6 +37,11 @@ const StyledModalContainer = styled.div`
   /* gap: 4rem; */
   flex-direction: column;
   position: relative;
+
+  @media ${media.mobile} {
+    max-width: 100rem;
+    width: 95%;
+  }
 `;
 
 const StyledModalButton = styled.button`
