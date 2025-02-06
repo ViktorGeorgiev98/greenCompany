@@ -3,7 +3,7 @@ import projectPaper from "../public/images/projectPaper.jpg";
 import fullRealization from "../public/images/fullRealization.jpg";
 import gardenMaintenance from "../public/images/gardenMaintenance.jpg";
 import landscaping from "../public/images/landscaping.jpg";
-import rooftopGarden from "../public/images/roofTopGarden.jpg";
+import rooftopGarden from "../public/images/rooftopGarden.jpg";
 import wateringSystem from "../public/images/wateringSystem.jpg";
 import Header from "./Header";
 import { useLanguageContext } from "../Context/LanguageContext";
