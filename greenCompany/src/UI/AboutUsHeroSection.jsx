@@ -2,6 +2,7 @@ import styled from "styled-components";
 import aboutUsImage from "../public/images/aboutUsHeroImage.jpg";
 import Header from "./Header";
 import { useLanguageContext } from "../Context/LanguageContext";
+import { media } from "../Utils/constants";
 
 const StyledAboutUsHeroSection = styled.section`
   width: 100%;
@@ -19,6 +20,9 @@ const StyledAboutUsHeroSection = styled.section`
   align-items: center;
   flex-direction: column;
   gap: 7.5rem;
+  @media ${media.mobile} {
+    padding: 1rem 7rem;
+  }
 `;
 
 function AboutUsHeroSection() {
@@ -26,11 +30,11 @@ function AboutUsHeroSection() {
   return (
     <StyledAboutUsHeroSection>
       <Header animation="topToBottom" type="main">
-        {language === "English" ? "About the company" : "За компанията"}
+        {language === "English" ? "About Us" : "За компанията"}
       </Header>
       <Header type="tertiary" animation="bottomUpwards" delay="1s">
         {language === "English"
-          ? "Discover the story behind our company's creation and the passion that drives us forward."
+          ? "Discover the story behind our company's creation and our passion."
           : "Открийте историята зад създаването на  компанията и страстта за всичко, което правим."}
       </Header>
     </StyledAboutUsHeroSection>

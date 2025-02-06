@@ -41,6 +41,11 @@ const Button = styled.button`
     font-size: 2rem;
   }
 
+  @media ${media.mobile} {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+
   &:hover {
     ${(props) => {
       return animation[props.animation] || "";

@@ -28,6 +28,14 @@ const StyledOurService = styled.section`
   @media ${media.tabletLandscape} {
     padding: 7rem 10rem;
   }
+
+  @media ${media.tabletPortrait} {
+    padding: 4rem 6rem;
+  }
+
+  @media ${media.mobile} {
+    padding: 2rem 3rem;
+  }
 `;
 
 const StyledOutOfServiceGridRow = styled.div`
@@ -42,6 +50,11 @@ const StyledOutOfServiceGridRow = styled.div`
 
   @media ${media.tabletLandscape} {
     max-width: 100%;
+  }
+
+  @media ${media.mobile} {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
@@ -73,6 +86,10 @@ const OurServiceCardItem = styled.div`
     gap: 1.5rem;
     max-height: 90%;
   }
+
+  @media ${media.mobile} {
+    gap: 1.5rem;
+  }
 `;
 
 const OurServiceCardImg = styled.img`
@@ -102,6 +119,11 @@ const OurServiceCardTitle = styled.h3`
     font-size: 2rem;
     padding: 0.5rem;
   }
+
+  @media ${media.mobile} {
+    font-size: 1.6rem;
+    padding: 0.5rem;
+  }
 `;
 
 const OurServiceCardText = styled.p`
@@ -119,6 +141,12 @@ const OurServiceCardText = styled.p`
   @media ${media.tabletLandscape} {
     font-size: 1.6rem;
     padding: 2rem;
+    padding-top: 0;
+  }
+
+  @media ${media.mobile} {
+    font-size: 1.2rem;
+    padding: 1rem;
     padding-top: 0;
   }
 `;

@@ -18,6 +18,10 @@ const StyledHowItBegan = styled.div`
   @media ${media.tabletLandscape} {
     padding: 6rem 10rem 10rem 10rem;
   }
+
+  @media ${media.mobile} {
+    padding: 3rem 5rem 5rem 5rem;
+  }
 `;
 
 const StyledHowItBeganP = styled.p`
@@ -28,6 +32,10 @@ const StyledHowItBeganP = styled.p`
 
   @media ${media.tabletLandscape} {
     font-size: 1.8rem;
+  }
+
+  @media ${media.mobile} {
+    font-size: 1.2rem;
   }
 `;
 

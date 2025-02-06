@@ -65,6 +65,11 @@ const WhatWeStriveForCardContainer = styled.div`
   @media ${media.tabletLandscape} {
     width: 100%;
   }
+
+  @media ${media.mobile} {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const WhatWeStriveForCard = styled.div`

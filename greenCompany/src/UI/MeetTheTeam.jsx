@@ -49,6 +49,13 @@ const StyledMeetTheTeamContainer = styled.div`
     padding: 0 2rem 2rem 2rem;
     width: 100%;
   }
+
+  @media ${media.mobile} {
+    padding: 0 1rem 1rem 1rem;
+    width: 100%;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const StyledMeetTheTeamCardItem = styled.div`
@@ -114,6 +121,11 @@ const StyledMeetTheTeamCardText = styled.p`
   @media ${media.tabletPortrait} {
     font-size: 1.4rem;
     padding: 1.6rem;
+  }
+
+  @media ${media.mobile} {
+    font-size: 1.2rem;
+    padding: 1rem;
   }
 `;
 

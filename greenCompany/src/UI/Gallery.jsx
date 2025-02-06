@@ -35,6 +35,10 @@ const StyledGallerySection = styled.section`
   @media ${media.tabletPortrait} {
     padding: 2rem;
   }
+
+  @media ${media.mobile} {
+    padding: 1rem;
+  }
 `;
 
 const StyledGallery = styled.div`

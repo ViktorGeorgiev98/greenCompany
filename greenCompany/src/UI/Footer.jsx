@@ -32,6 +32,15 @@ const StyledFooter = styled.footer`
   @media ${media.tabletPortrait} {
     padding: 3rem;
   }
+
+  @media ${media.mobile} {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
 `;
 const StyledFooterColumn = styled.div`
   display: flex;
@@ -41,6 +50,11 @@ const StyledFooterColumn = styled.div`
   gap: 3rem;
   @media ${media.tabletLandscape} {
     align-self: center;
+  }
+
+  @media ${media.mobile} {
+    justify-content: center;
+    align-items: center;
   }
 `;
 

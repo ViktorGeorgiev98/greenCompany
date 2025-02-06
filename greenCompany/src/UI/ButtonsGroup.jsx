@@ -20,7 +20,7 @@ const StyledButtonsGroup = styled.div`
   `}
 
   @media ${media.tabletPortrait} {
-    gap: 4rem;
+    animation: leftToRight 1.5s ease-out forwards 1s;
   }
 `;
 

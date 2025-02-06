@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useLanguageContext } from "../Context/LanguageContext";
 import Logo from "./Logo";
 import { NavLink } from "react-router";
-import { bg, english } from "../Utils/constants";
+import { bg, english, media } from "../Utils/constants";
 import bgFlag from "../public/images/Flag_of_Bulgaria.svg.png";
 import englishFlag from "../public/images/englishFlag.png";
 
@@ -20,6 +20,10 @@ const StyledHeader = styled.header`
     var(--color-main-dark)
   );
   background-size: cover;
+
+  @media ${media.mobile} {
+    padding: 1rem 2rem;
+  }
 `;
 
 const StyledNav = styled.nav`
@@ -30,6 +34,10 @@ const StyledUl = styled.ul`
   display: flex;
   gap: 4rem;
   align-items: center;
+
+  @media ${media.mobile} {
+    gap: 3rem;
+  }
 `;
 
 const StyledLi = styled.li`
@@ -66,6 +74,10 @@ const StyledLink = styled(NavLink)`
 
   &:hover::after {
     transform: scaleX(1);
+  }
+
+  @media ${media.mobile} {
+    font-size: 1.4rem;
   }
 `;
 

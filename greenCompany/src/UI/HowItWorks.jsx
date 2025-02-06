@@ -28,6 +28,10 @@ const StyledHowItWorks = styled.section`
   @media ${media.tabletLandscape} {
     padding: 2.5rem 6rem 6rem 6rem;
   }
+
+  @media ${media.tabletPortrait} {
+    padding: 2.5rem 5rem 5rem 5rem;
+  }
 `;
 
 const StyledHowItWorksContainer = styled.div`
@@ -42,6 +46,17 @@ const StyledHowItWorksContainer = styled.div`
   @media ${media.tabletLandscape} {
     margin-top: 5rem;
     grid-gap: 8rem;
+  }
+
+  @media ${media.tabletPortrait} {
+    margin-top: 4rem;
+    grid-gap: 6rem;
+  }
+
+  @media ${media.mobile} {
+    margin-top: 3rem;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 
@@ -73,6 +88,9 @@ const StyledHowItWorksText = styled.p`
   @media ${media.tabletLandscape} {
     font-size: 1.6rem;
   }
+  @media ${media.tabletPortrait} {
+    font-size: 1.4rem;
+  }
 `;
 
 const StyledHowItWorksTitle = styled.p`
@@ -84,6 +102,10 @@ const StyledHowItWorksTitle = styled.p`
   @media ${media.tabletLandscape} {
     font-size: 6rem;
   }
+
+  @media ${media.tabletPortrait} {
+    font-size: 5rem;
+  }
 `;
 
 const StyledHowItWorksHeader = styled.h3`
@@ -93,6 +115,10 @@ const StyledHowItWorksHeader = styled.h3`
 
   @media ${media.tabletLandscape} {
     font-size: 2.5rem;
+  }
+
+  @media ${media.tabletPortrait} {
+    font-size: 2rem;
   }
 `;
 
