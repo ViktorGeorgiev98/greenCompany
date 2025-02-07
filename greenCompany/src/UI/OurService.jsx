@@ -121,7 +121,7 @@ const OurServiceCardTitle = styled.h3`
   }
 
   @media ${media.mobile} {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     padding: 0.5rem;
   }
 `;
@@ -145,7 +145,7 @@ const OurServiceCardText = styled.p`
   }
 
   @media ${media.mobile} {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 1rem;
     padding-top: 0;
   }

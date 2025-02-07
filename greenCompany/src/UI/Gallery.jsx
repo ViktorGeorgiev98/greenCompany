@@ -37,7 +37,7 @@ const StyledGallerySection = styled.section`
   }
 
   @media ${media.mobile} {
-    padding: 1rem;
+    padding: 2rem 0.1rem;
   }
 `;
 

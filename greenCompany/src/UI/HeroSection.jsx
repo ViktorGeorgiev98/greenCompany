@@ -43,7 +43,7 @@ const StyledHeroSection = styled.section`
   }
 
   @media ${media.mobile} {
-    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    padding: 2rem 0.5rem;
   }
 `;
 
@@ -60,10 +60,18 @@ const StyledHeroSectionLeftSide = styled.div`
     justify-content: center;
     /* padding: 4rem; */
   }
+  @media ${media.mobile} {
+    gap: 3rem;
+  }
 `;
 const StyledHeroSectionRightSide = styled.div`
   @media ${media.tabletPortrait} {
     width: 85%;
+    height: auto;
+  }
+
+  @media ${media.mobile} {
+    width: 95%;
     height: auto;
   }
   /* width: 100%; */

@@ -29,7 +29,7 @@ const StyledWhatWeStriveFor = styled.div`
 
   @media ${media.mobile} {
     gap: 3rem;
-    padding: 2rem 3rem 3rem 3rem;
+    padding: 2rem;
   }
 `;
 
@@ -57,6 +57,11 @@ const StyledWhatWeStriveForP = styled.p`
     font-size: 1.4rem;
     letter-spacing: 1.1px;
   }
+
+  @media ${media.mobile} {
+    font-size: 1.1rem;
+    letter-spacing: 1.1px;
+  }
 `;
 
 const WhatWeStriveForCardContainer = styled.div`
@@ -74,6 +79,7 @@ const WhatWeStriveForCardContainer = styled.div`
   @media ${media.mobile} {
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.5rem;
   }
 `;
 
@@ -87,6 +93,7 @@ const WhatWeStriveForCard = styled.div`
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   padding: 3rem;
+  border-radius: 0.5rem;
 
   @media (max-width: 160em) {
     padding: 2.8rem;
