@@ -8,5 +8,8 @@ Tech stack:
 2/ React - react router, customized components, context, JSX
 3/ HTML
 4/ CSS
-5/ Formik
+5/ Libraries => scroll on view
+
+
+Can be accessed here => https://green-company.netlify.app/home
 
